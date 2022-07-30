@@ -20,7 +20,7 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build"
+		"deploy": "gh-pages -d dist"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -41,6 +41,7 @@
 		]
 	},
 	"devDependencies": {
+		"gh-pages": "^4.0.0",
 		"sass": "^1.54.0",
 		"sass-loader": "^13.0.2"
 	}
