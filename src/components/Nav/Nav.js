@@ -5,11 +5,16 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import PopUpMobile from './PopUpMobile/PopUpMobile';
 import DrawerContainer from './DrawerContainer/DrawerContainer';
-import Bars from './Bars/Bars';
+// import Bars from './Bars/Bars';
 import Logo from './Logo/Logo';
 import NavDeskop from './NavDeskop/NavDeskop';
+import { useState } from 'react';
 
 function Nav() {
+	const [isActive, setActive] = useState(false);
+	const menuToggle = () => {
+		setActive(!isActive);
+	};
 	return (
 		<>
 			<nav className={styles.backgroundColor}>
@@ -31,7 +36,15 @@ function Nav() {
 						</Col>
 						<Col
 							className={'d-lg-none text-left ' + styles.pointer}>
-							<Bars />
+							<i
+								className={
+									'fa-solid' +
+									' ' +
+									styles.bars +
+									' ' +
+									(!isActive ? 'fa-bars' : 'fa-xmark')
+								}
+								onClick={menuToggle}></i>
 						</Col>
 						<Col className={`text-center ${styles.pointer}`}>
 							<DrawerContainer></DrawerContainer>
