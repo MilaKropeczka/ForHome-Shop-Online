@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/React-Nauka/static/css/main.81269362.css",
-    "main.js": "/React-Nauka/static/js/main.52c10008.js",
+    "main.css": "/React-Nauka/static/css/main.d1358566.css",
+    "main.js": "/React-Nauka/static/js/main.f407b71d.js",
     "static/js/787.00a70a93.chunk.js": "/React-Nauka/static/js/787.00a70a93.chunk.js",
     "index.html": "/React-Nauka/index.html",
-    "main.81269362.css.map": "/React-Nauka/static/css/main.81269362.css.map",
-    "main.52c10008.js.map": "/React-Nauka/static/js/main.52c10008.js.map",
+    "main.d1358566.css.map": "/React-Nauka/static/css/main.d1358566.css.map",
+    "main.f407b71d.js.map": "/React-Nauka/static/js/main.f407b71d.js.map",
     "787.00a70a93.chunk.js.map": "/React-Nauka/static/js/787.00a70a93.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.81269362.css",
-    "static/js/main.52c10008.js"
+    "static/css/main.d1358566.css",
+    "static/js/main.f407b71d.js"
   ]
 }
