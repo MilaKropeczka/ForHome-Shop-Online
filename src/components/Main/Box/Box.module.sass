@@ -1,0 +1,35 @@
+@import "../../colors"
+.box
+    overflow: hidden
+    width: 280px
+    // width: calc(100% - 20px)
+    height: 400px
+    background-color: tomato
+    border-radius: 20px
+    box-shadow: 2px 2px 6px $grey
+    margin: 20px auto
+    @media screen and ( min-width: $lg )
+        margin: 20px auto
+
+.img
+    width: 100%
+    height: calc( 50% - 25px )
+    background-color: white
+
+.main
+    width: 100%
+    height: calc( 50% - 25px )
+    background-color: $light
+    text-align: center
+    h4
+        font-size: 2em
+        padding-top: 25%
+    p
+        font-size: 1.4em
+
+.buy
+    color: white
+    font-size: 1.6em
+    text-align: center
+    line-height: 50px
+    background-color: $primary
