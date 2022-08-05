@@ -5,7 +5,7 @@
     position: relative
     background-position: center
     background-size: cover
-    height: 500px
+    height: 400px
     @media screen and (min-width: $lg)
         height: 800px
 
@@ -19,18 +19,23 @@
         background-image: url("../../assets/Deskop/mug.jpg")
 
 .specialOffer
-    font-size: 2.8em
+    font-size: 1.6em
     color: white
     position: relative
+    @media screen and (min-width: $lg)
+        font-size: 2.8rem
 
 .code
-    font-size: 3.6rem
+    font-size: 2.6rem
     text-align: center
     color: $primary
     position: absolute
-    top: calc( 50% + 50px  )
+    top: calc( 50% + 25px  )
     left: 50%
     transform: translate(-50%, -50%)
+    @media screen and (min-width: $lg)
+        top: calc( 50% + 50px  )
+        font-size: 3.6rem
 
 .shadow
     position: absolute
