@@ -1,12 +1,21 @@
-// import React from 'react';
-// import styles from './Bars.module.sass';
+import React from 'react';
+import styles from './Bars.module.sass';
 
-// function Bars(props) {
-// 	return (
-// 		<i
-// 			className={'fa-solid ' + props.className + ' ' + styles.bars}
-// 			onClick={menuToggle}></i>
-// 	);
-// }
+function Bars(props) {
+	const isActive = props.isActive;
+	const setActive = props.setActive;
+	const menuToggle = props.menuToggle;
+	return (
+		<i
+			className={
+				'fa-solid' +
+				' ' +
+				styles.bars +
+				' ' +
+				(!isActive ? 'fa-bars' : 'fa-xmark')
+			}
+			onClick={menuToggle}></i>
+	);
+}
 
-// export default Bars;
+export default Bars;
