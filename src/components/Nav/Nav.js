@@ -47,10 +47,13 @@ function Nav() {
 								onClick={menuToggle}></i>
 						</Col>
 						<Col className={`text-center ${styles.pointer}`}>
-							<DrawerContainer></DrawerContainer>
+							<DrawerContainer />
 						</Col>
 					</Row>
-					<Row className={`d-lg-none ${styles.menu} ${styles.close}`}>
+					<Row
+						className={`d-lg-none ${styles.menu} ${
+							isActive ? null : styles.close
+						}`}>
 						<PopUpMobile />
 					</Row>
 				</Container>
