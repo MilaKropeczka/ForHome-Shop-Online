@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/React-Nauka/static/css/main.66d7d9fd.css",
-    "main.js": "/React-Nauka/static/js/main.1b225a15.js",
+    "main.css": "/React-Nauka/static/css/main.64cc9fb0.css",
+    "main.js": "/React-Nauka/static/js/main.019bdae4.js",
     "static/js/787.00a70a93.chunk.js": "/React-Nauka/static/js/787.00a70a93.chunk.js",
     "static/media/mug.jpg": "/React-Nauka/static/media/mug.8d7e9cc5745f44c1c0b7.jpg",
     "static/media/pillow.jpg": "/React-Nauka/static/media/pillow.5627f6630040e5b88744.jpg",
@@ -10,12 +10,12 @@
     "static/media/shoes.jpg": "/React-Nauka/static/media/shoes.e87a61847c2c54a14165.jpg",
     "static/media/mug2.jpg": "/React-Nauka/static/media/mug2.bd5f34e00ec286c66ae8.jpg",
     "index.html": "/React-Nauka/index.html",
-    "main.66d7d9fd.css.map": "/React-Nauka/static/css/main.66d7d9fd.css.map",
-    "main.1b225a15.js.map": "/React-Nauka/static/js/main.1b225a15.js.map",
+    "main.64cc9fb0.css.map": "/React-Nauka/static/css/main.64cc9fb0.css.map",
+    "main.019bdae4.js.map": "/React-Nauka/static/js/main.019bdae4.js.map",
     "787.00a70a93.chunk.js.map": "/React-Nauka/static/js/787.00a70a93.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.66d7d9fd.css",
-    "static/js/main.1b225a15.js"
+    "static/css/main.64cc9fb0.css",
+    "static/js/main.019bdae4.js"
   ]
 }
