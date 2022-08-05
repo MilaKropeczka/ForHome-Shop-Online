@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/React-Nauka/static/css/main.999212cd.css",
+    "main.css": "/React-Nauka/static/css/main.19360e18.css",
     "main.js": "/React-Nauka/static/js/main.3191448e.js",
     "static/js/787.00a70a93.chunk.js": "/React-Nauka/static/js/787.00a70a93.chunk.js",
     "static/media/mug.jpg": "/React-Nauka/static/media/mug.8d7e9cc5745f44c1c0b7.jpg",
     "static/media/pillow.jpg": "/React-Nauka/static/media/pillow.5627f6630040e5b88744.jpg",
     "index.html": "/React-Nauka/index.html",
-    "main.999212cd.css.map": "/React-Nauka/static/css/main.999212cd.css.map",
+    "main.19360e18.css.map": "/React-Nauka/static/css/main.19360e18.css.map",
     "main.3191448e.js.map": "/React-Nauka/static/js/main.3191448e.js.map",
     "787.00a70a93.chunk.js.map": "/React-Nauka/static/js/787.00a70a93.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.999212cd.css",
+    "static/css/main.19360e18.css",
     "static/js/main.3191448e.js"
   ]
 }
