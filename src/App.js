@@ -3,6 +3,8 @@ import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import SendSection from './components/SendSection/SendSection';
 import Faq from './components/Faq/Faq';
+import About from './components/About/About';
+import Footer from './components/Footer/Footer';
 
 function App() {
 	return (
@@ -12,6 +14,8 @@ function App() {
 			<Main />
 			<SendSection />
 			<Faq />
+			<About />
+			<Footer />
 		</div>
 	);
 }
