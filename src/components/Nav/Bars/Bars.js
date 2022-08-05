@@ -3,7 +3,6 @@ import styles from './Bars.module.sass';
 
 function Bars(props) {
 	const isActive = props.isActive;
-	const setActive = props.setActive;
 	const menuToggle = props.menuToggle;
 	return (
 		<i
