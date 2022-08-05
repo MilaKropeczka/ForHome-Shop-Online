@@ -33,14 +33,14 @@ function Main() {
 					status='wyprzedaz'
 					statusFont='through'
 					title='Buty modne Nike'
-					price='46.99 zł'
-					newPrice='23.99 zł'
+					price='360.99 zł'
+					newPrice='230.99 zł'
 					img={img1}
 					shortContent='Buty jakies tam'
 				/>
 				<Box
 					status='hit'
-					title='Kubek termiczny love'
+					title='Kubek czerwony love'
 					price='13.99 zł'
 					img={img4}
 				/>

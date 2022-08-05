@@ -1,6 +1,7 @@
 import Nav from './components/Nav/Nav';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
+import SendSection from './components/SendSection/SendSection';
 
 function App() {
 	return (
@@ -8,6 +9,7 @@ function App() {
 			<Nav />
 			<Header />
 			<Main />
+			<SendSection />
 		</div>
 	);
 }
