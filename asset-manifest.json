@@ -1,17 +1,21 @@
 {
   "files": {
-    "main.css": "/React-Nauka/static/css/main.8f806183.css",
-    "main.js": "/React-Nauka/static/js/main.f797eba9.js",
+    "main.css": "/React-Nauka/static/css/main.76355c43.css",
+    "main.js": "/React-Nauka/static/js/main.38858223.js",
     "static/js/787.00a70a93.chunk.js": "/React-Nauka/static/js/787.00a70a93.chunk.js",
     "static/media/mug.jpg": "/React-Nauka/static/media/mug.8d7e9cc5745f44c1c0b7.jpg",
     "static/media/pillow.jpg": "/React-Nauka/static/media/pillow.5627f6630040e5b88744.jpg",
+    "static/media/pillow2.jpg": "/React-Nauka/static/media/pillow2.f25009cbaf88ff6b3693.jpg",
+    "static/media/czapka.jpg": "/React-Nauka/static/media/czapka.acf9c40ed2222bd92c61.jpg",
+    "static/media/shoes.jpg": "/React-Nauka/static/media/shoes.e87a61847c2c54a14165.jpg",
+    "static/media/mug2.jpg": "/React-Nauka/static/media/mug2.bd5f34e00ec286c66ae8.jpg",
     "index.html": "/React-Nauka/index.html",
-    "main.8f806183.css.map": "/React-Nauka/static/css/main.8f806183.css.map",
-    "main.f797eba9.js.map": "/React-Nauka/static/js/main.f797eba9.js.map",
+    "main.76355c43.css.map": "/React-Nauka/static/css/main.76355c43.css.map",
+    "main.38858223.js.map": "/React-Nauka/static/js/main.38858223.js.map",
     "787.00a70a93.chunk.js.map": "/React-Nauka/static/js/787.00a70a93.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f806183.css",
-    "static/js/main.f797eba9.js"
+    "static/css/main.76355c43.css",
+    "static/js/main.38858223.js"
   ]
 }
