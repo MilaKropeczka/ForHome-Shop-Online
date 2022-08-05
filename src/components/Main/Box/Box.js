@@ -6,7 +6,9 @@ function Box(props) {
 	return (
 		<Col>
 			<div className={`${styles.box}`}>
-				<div className={styles.img}></div>
+				<div className={styles.img}>
+					<img src={props.img} alt={props.shortContent} />
+				</div>
 				<div className={styles.main}>
 					<p className={styles.status + ' ' + styles[props.status]}>
 						{props.status}
