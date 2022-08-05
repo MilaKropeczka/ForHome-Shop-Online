@@ -2,14 +2,16 @@
 .box
     overflow: hidden
     width: 280px
-    // width: calc(100% - 20px)
     height: 400px
-    background-color: tomato
     border-radius: 20px
     box-shadow: 2px 2px 6px $grey
     margin: 20px auto
+    cursor: pointer
+    transition: .2s
     @media screen and ( min-width: $lg )
         margin: 20px auto
+.box:hover
+    transform: scale(1.01) rotate(1deg)
 
 .img
     width: 100%
@@ -33,3 +35,6 @@
     text-align: center
     line-height: 50px
     background-color: $primary
+    transition: color .2s
+.buy:hover
+    color: $grey

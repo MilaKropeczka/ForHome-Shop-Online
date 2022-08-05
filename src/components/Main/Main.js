@@ -25,18 +25,6 @@ function Main() {
 				<Col>
 					<Box />
 				</Col>
-				<Col>
-					<Box />
-				</Col>
-				<Col>
-					<Box />
-				</Col>
-				<Col>
-					<Box />
-				</Col>
-				<Col>
-					<Box />
-				</Col>
 			</Row>
 		</Container>
 	);
