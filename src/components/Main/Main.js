@@ -13,18 +13,20 @@ function Main() {
 				</Col>
 			</Row>
 			<Row>
-				<Col>
-					<Box />
-				</Col>
-				<Col>
-					<Box />
-				</Col>
-				<Col>
-					<Box />
-				</Col>
-				<Col>
-					<Box />
-				</Col>
+				<Box status='hit' title='Buty modne Nike' price='23.99 zł' />
+				<Box status='hit' title='Czapka na lato' price='79.99 zł' />
+				<Box
+					status='wyprzedaz'
+					statusFont='through'
+					title='Poduszka czerwona serce'
+					price='46.99 zł'
+					newPrice='23.99 zł'
+				/>
+				<Box
+					status='hit'
+					title='Kubek termiczny love'
+					price='13.99 zł'
+				/>
 			</Row>
 		</Container>
 	);

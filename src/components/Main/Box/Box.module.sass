@@ -23,11 +23,26 @@
     height: calc( 50% - 25px )
     background-color: $light
     text-align: center
+    position: relative
     h4
         font-size: 2em
         padding-top: 25%
     p
         font-size: 1.4em
+
+.status
+    position: absolute
+    height: 20px
+    top: 10px
+    left: 10px
+
+.hit
+    background-color: #abf0a4
+    width: 30px
+
+.wyprzedaz
+    width: 80px
+    background-color: tomato
 
 .buy
     color: white
@@ -37,4 +52,13 @@
     background-color: $primary
     transition: color .2s
 .buy:hover
-    color: $grey
+    font-weight: 500
+
+.newPrice
+    color: #e80000
+    font-size: 2.2em !important
+    font-weight: 500
+    transform: translateY(-10px)
+
+.through
+    text-decoration: line-through !important
