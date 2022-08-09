@@ -12,19 +12,19 @@ function App() {
 		<Router>
 			<div className='App'>
 				<Nav />
-				<Route exact={true} path='ForHome/'>
+				<Route exact={true} path='/ForHome/'>
 					<Header />
 					<Main />
 					<SendSection />
 					<Faq />
 				</Route>
-				<Route path='ForHome/Sypialnia'>Sypialnia</Route>
-				<Route path='ForHome/Salon'>Salon</Route>
-				<Route path='ForHome/Kuchnia'>Kuchnia</Route>
-				<Route path='ForHome/Wyprzedaż'>Wyprzedaż</Route>
-				<Route path='ForHome/Koszyk'>Koszyk</Route>
-				<Route path='ForHome/Ulubione'>Ulubione</Route>
-				<Route path='ForHome/Wyszukiwarka'>Wyszukiwarka</Route>
+				<Route path='/ForHome/Sypialnia'>Sypialnia</Route>
+				<Route path='/ForHome/Salon'>Salon</Route>
+				<Route path='/ForHome/Kuchnia'>Kuchnia</Route>
+				<Route path='/ForHome/Wyprzedaż'>Wyprzedaż</Route>
+				<Route path='/ForHome/Koszyk'>Koszyk</Route>
+				<Route path='/ForHome/Ulubione'>Ulubione</Route>
+				<Route path='/ForHome/Wyszukiwarka'>Wyszukiwarka</Route>
 				<About />
 				<Footer />
 			</div>
