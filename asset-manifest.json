@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/React-Nauka/static/css/main.64cc9fb0.css",
-    "main.js": "/React-Nauka/static/js/main.b3c64adf.js",
-    "static/js/787.00a70a93.chunk.js": "/React-Nauka/static/js/787.00a70a93.chunk.js",
-    "static/media/mug.jpg": "/React-Nauka/static/media/mug.8d7e9cc5745f44c1c0b7.jpg",
-    "static/media/pillow.jpg": "/React-Nauka/static/media/pillow.5627f6630040e5b88744.jpg",
-    "static/media/pillow2.jpg": "/React-Nauka/static/media/pillow2.f25009cbaf88ff6b3693.jpg",
-    "static/media/czapka.jpg": "/React-Nauka/static/media/czapka.acf9c40ed2222bd92c61.jpg",
-    "static/media/shoes.jpg": "/React-Nauka/static/media/shoes.e87a61847c2c54a14165.jpg",
-    "static/media/mug2.jpg": "/React-Nauka/static/media/mug2.bd5f34e00ec286c66ae8.jpg",
-    "index.html": "/React-Nauka/index.html",
-    "main.64cc9fb0.css.map": "/React-Nauka/static/css/main.64cc9fb0.css.map",
-    "main.b3c64adf.js.map": "/React-Nauka/static/js/main.b3c64adf.js.map",
-    "787.00a70a93.chunk.js.map": "/React-Nauka/static/js/787.00a70a93.chunk.js.map"
+    "main.css": "/ForHome/static/css/main.bc3d3704.css",
+    "main.js": "/ForHome/static/js/main.b1c1beed.js",
+    "static/js/787.90b81d1a.chunk.js": "/ForHome/static/js/787.90b81d1a.chunk.js",
+    "static/media/mug.jpg": "/ForHome/static/media/mug.8d7e9cc5745f44c1c0b7.jpg",
+    "static/media/pillow.jpg": "/ForHome/static/media/pillow.5627f6630040e5b88744.jpg",
+    "static/media/pillow2.jpg": "/ForHome/static/media/pillow2.f25009cbaf88ff6b3693.jpg",
+    "static/media/czapka.jpg": "/ForHome/static/media/czapka.acf9c40ed2222bd92c61.jpg",
+    "static/media/shoes.jpg": "/ForHome/static/media/shoes.e87a61847c2c54a14165.jpg",
+    "static/media/mug2.jpg": "/ForHome/static/media/mug2.bd5f34e00ec286c66ae8.jpg",
+    "index.html": "/ForHome/index.html",
+    "main.bc3d3704.css.map": "/ForHome/static/css/main.bc3d3704.css.map",
+    "main.b1c1beed.js.map": "/ForHome/static/js/main.b1c1beed.js.map",
+    "787.90b81d1a.chunk.js.map": "/ForHome/static/js/787.90b81d1a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.64cc9fb0.css",
-    "static/js/main.b3c64adf.js"
+    "static/css/main.bc3d3704.css",
+    "static/js/main.b1c1beed.js"
   ]
 }
