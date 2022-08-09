@@ -18,13 +18,27 @@ function App() {
 					<SendSection />
 					<Faq />
 				</Route>
-				<Route path='/Sypialnia'>Sypialnia</Route>
-				<Route path='/Salon'>Salon</Route>
-				<Route path='/Kuchnia'>Kuchnia</Route>
-				<Route path='/Wyprzedaż'>Wyprzedaż</Route>
-				<Route path='/Koszyk'>Koszyk</Route>
-				<Route path='/Ulubione'>Ulubione</Route>
-				<Route path='/Wyszukiwarka'>Wyszukiwarka</Route>
+				<Route exact={true} path='/Sypialnia'>
+					Sypialnia
+				</Route>
+				<Route exact={true} path='/Salon'>
+					Salon
+				</Route>
+				<Route exact={true} path='/Kuchnia'>
+					Kuchnia
+				</Route>
+				<Route exact={true} path='/Wyprzedaż'>
+					Wyprzedaż
+				</Route>
+				<Route exact={true} path='/Koszyk'>
+					Koszyk
+				</Route>
+				<Route exact={true} path='/Ulubione'>
+					Ulubione
+				</Route>
+				<Route exact={true} path='/Wyszukiwarka'>
+					Wyszukiwarka
+				</Route>
 				<About />
 				<Footer />
 			</div>
