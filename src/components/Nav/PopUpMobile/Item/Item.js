@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from './Item.module.sass';
+import { Link } from 'react-router-dom';
 
 function Item(props) {
 	return (
 		<li>
-			<a className={styles[props.className]} href='#'>
+			<Link to={`/${props.title}`} className={styles[props.className]}>
 				{props.title}
-			</a>
+			</Link>
 		</li>
 	);
 }
