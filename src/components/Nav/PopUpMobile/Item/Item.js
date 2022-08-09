@@ -7,7 +7,7 @@ function Item(props) {
 		<>
 			<li>
 				<Link
-					to={`/${props.title}`}
+					to={`ForHome/${props.title}`}
 					className={styles[props.className]}>
 					{props.title}
 				</Link>
