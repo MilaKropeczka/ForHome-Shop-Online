@@ -1,29 +1,13 @@
 import React from 'react';
-import styles from './NavDeskop.module.sass';
+import Item from './Item/Item';
 
 function NavDeskop() {
 	return (
 		<>
-			<div className='d-inline-block mx-4'>
-				<a href='#' className={styles.secondaryFont}>
-					Sypialnia
-				</a>
-			</div>
-			<div className='d-inline-block mx-4'>
-				<a href='#' className={styles.secondaryFont}>
-					Salon
-				</a>
-			</div>
-			<div className='d-inline-block mx-4'>
-				<a href='#' className={styles.secondaryFont}>
-					Kuchnia
-				</a>
-			</div>
-			<div className={'d-inline-block mx-4'}>
-				<a href='#' className={styles.primaryFont}>
-					Wyprzedaż
-				</a>
-			</div>
+			<Item title='Sypialnia' className='secondaryFont' />
+			<Item title='Salon' className='secondaryFont' />
+			<Item title='Kuchnia' className='secondaryFont' />
+			<Item title='Wyprzedaż' className='primaryFont' />
 		</>
 	);
 }

@@ -18,10 +18,13 @@ function App() {
 					<SendSection />
 					<Faq />
 				</Route>
-				<Route path='/Sypialnia'></Route>
-				<Route path='/Salon'></Route>
-				<Route path='/Kuchnia'></Route>
-				<Route path='/Wyprzedaż'></Route>
+				<Route path='/Sypialnia'>Sypialnia</Route>
+				<Route path='/Salon'>Salon</Route>
+				<Route path='/Kuchnia'>Kuchnia</Route>
+				<Route path='/Wyprzedaż'>Wyprzedaż</Route>
+				<Route path='/Koszyk'>Koszyk</Route>
+				<Route path='/Ulubione'>Ulubione</Route>
+				<Route path='/Wyszukiwarka'>Wyszukiwarka</Route>
 				<About />
 				<Footer />
 			</div>

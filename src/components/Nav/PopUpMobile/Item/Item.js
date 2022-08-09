@@ -4,11 +4,15 @@ import { Link } from 'react-router-dom';
 
 function Item(props) {
 	return (
-		<li>
-			<Link to={`/${props.title}`} className={styles[props.className]}>
-				{props.title}
-			</Link>
-		</li>
+		<>
+			<li>
+				<Link
+					to={`/${props.title}`}
+					className={styles[props.className]}>
+					{props.title}
+				</Link>
+			</li>
+		</>
 	);
 }
 
