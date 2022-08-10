@@ -34,7 +34,7 @@ function App() {
 						<Main title='Wyprzedaż' component={<Wyprzedaz />} />
 					</Route>
 					<Route path='/Koszyk'>
-						<Cart title='Koszyk' />
+						<Cart title='Koszyk' sum='250,98' />
 					</Route>
 					<Route path='/Ulubione'>
 						<Main title='Ulubione' component={<Ulubione />} />
@@ -48,9 +48,9 @@ function App() {
 					<Route exact path='/'>
 						<Header />
 						<Main title='Bestsellery' component={<Bestseller />} />
-						<SendSection />
 					</Route>
 				</Switch>
+				<SendSection />
 				<Faq />
 				<About />
 				<Footer />

@@ -1,14 +1,13 @@
 import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Img from './Img/Img';
-import img from '../../../assets/Mobile/pillow2.jpg';
 import styles from './Item.module.sass';
 
 function Item(props) {
 	return (
 		<>
 			<Col>
-				<Img img={`${img}`} />
+				<Img img={props.img} />
 			</Col>
 			<Col
 				xs={12}
