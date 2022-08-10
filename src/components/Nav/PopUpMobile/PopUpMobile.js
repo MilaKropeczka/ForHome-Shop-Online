@@ -12,7 +12,6 @@ function PopUpMobile() {
 				<Item title='Salon' className='secondaryFont' />
 				<Item title='Kuchnia' className='secondaryFont' />
 				<Item title='Wyprzedaż' className='primaryFont' />
-				<div className='btn btn-primary'>TEst</div>
 			</ul>
 		</div>
 	);
