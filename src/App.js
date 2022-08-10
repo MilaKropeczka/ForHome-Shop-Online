@@ -6,6 +6,11 @@ import Faq from './components/Faq/Faq';
 import About from './components/About/About';
 import Footer from './components/Footer/Footer';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import Bestseller from './data/Bestseller';
+import Sypialnia from './data/Sypialnia';
+import Salon from './data/Salon';
+import Kuchnia from './data/Kuchnia';
+import Wyprzedaz from './data/Wyprzedaz';
 
 function App() {
 	return (
@@ -14,17 +19,23 @@ function App() {
 				<Nav />
 				<Switch>
 					<Route path='/Sypialnia'>
-						<Main title='Sypialnia' />
+						<Main title='Sypialnia' component={<Sypialnia />} />
 					</Route>
-					<Route path='/Salon'>Salon</Route>
-					<Route path='/Kuchnia'>Kuchnia</Route>
-					<Route path='/Wyprzedaż'>Wyprzedaż</Route>
-					<Route path='/Koszyk'>Koszyk</Route>
-					<Route path='/Ulubione'>Ulubione</Route>
-					<Route path='/Wyszukiwarka'>Wyszukiwarka</Route>
+					<Route path='/Salon'>
+						<Main title='Salon' component={<Salon />} />
+					</Route>
+					<Route path='/Kuchnia'>
+						<Main title='Kuchnia' component={<Kuchnia />} />
+					</Route>
+					<Route path='/Wyprzedaż'>
+						<Main title='Wyprzedaż' component={<Wyprzedaz />} />
+					</Route>
+					<Route path='/Koszyk'></Route>
+					<Route path='/Ulubione'></Route>
+					<Route path='/Wyszukiwarka'></Route>
 					<Route exact path='/'>
 						<Header />
-						<Main title='Bestsellery' />
+						<Main title='Bestsellery' component={<Bestseller />} />
 						<SendSection />
 						<Faq />
 					</Route>
