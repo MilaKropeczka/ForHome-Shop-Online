@@ -14,9 +14,7 @@ function App() {
 				<Nav />
 				<Switch>
 					<Route path='/Sypialnia'>Sypialnia</Route>
-					<Route path='/Salon'>
-						<h1>Salon</h1>
-					</Route>
+					<Route path='/Salon'>Salon</Route>
 					<Route path='/Kuchnia'>Kuchnia</Route>
 					<Route path='/Wyprzedaż'>Wyprzedaż</Route>
 					<Route path='/Koszyk'>Koszyk</Route>
