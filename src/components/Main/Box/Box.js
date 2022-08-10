@@ -7,6 +7,7 @@ function Box(props) {
 		<Col>
 			<div className={`${styles.box}`}>
 				<div className={styles.img}>
+					<i className={`fa-solid fa-heart ${styles.ico}`}></i>
 					<img src={props.img} alt={props.shortContent} />
 				</div>
 				<div className={styles.main}>
