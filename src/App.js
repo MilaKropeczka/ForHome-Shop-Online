@@ -15,7 +15,6 @@ function App() {
 				<Switch>
 					<Route path='/Sypialnia'>
 						<Main title='Sypialnia' />
-						Sypialnia
 					</Route>
 					<Route path='/Salon'>Salon</Route>
 					<Route path='/Kuchnia'>Kuchnia</Route>
