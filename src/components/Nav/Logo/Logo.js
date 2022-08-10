@@ -6,8 +6,10 @@ import { Link } from 'react-router-dom';
 function Logo() {
 	return (
 		<>
-			<Link to='ForHome'>
-				<img src={img} alt='Logo' className={styles.logo} />
+			<Link to=''>
+				<div className={styles.shadow}>
+					<img src={img} alt='Logo' className={styles.logo} />
+				</div>
 			</Link>
 		</>
 	);

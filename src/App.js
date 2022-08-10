@@ -5,7 +5,7 @@ import SendSection from './components/SendSection/SendSection';
 import Faq from './components/Faq/Faq';
 import About from './components/About/About';
 import Footer from './components/Footer/Footer';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
 	return (
@@ -13,14 +13,16 @@ function App() {
 			<div className='App'>
 				<Nav />
 				<Switch>
-					<Route path='ForHome/Sypialnia'>Sypialnia</Route>
-					<Route path='ForHome/Salon'>Salon</Route>
-					<Route path='ForHome/Kuchnia'>Kuchnia</Route>
-					<Route path='ForHome/Wyprzedaż'>Wyprzedaż</Route>
-					<Route path='ForHome/Koszyk'>Koszyk</Route>
-					<Route path='ForHome/Ulubione'>Ulubione</Route>
-					<Route path='ForHome/Wyszukiwarka'>Wyszukiwarka</Route>
-					<Route path='/ForHome'>
+					<Route path='/Sypialnia'>Sypialnia</Route>
+					<Route path='/Salon'>
+						<h1>Salon</h1>
+					</Route>
+					<Route path='/Kuchnia'>Kuchnia</Route>
+					<Route path='/Wyprzedaż'>Wyprzedaż</Route>
+					<Route path='/Koszyk'>Koszyk</Route>
+					<Route path='/Ulubione'>Ulubione</Route>
+					<Route path='/Wyszukiwarka'>Wyszukiwarka</Route>
+					<Route exact path='/'>
 						<Header />
 						<Main />
 						<SendSection />
