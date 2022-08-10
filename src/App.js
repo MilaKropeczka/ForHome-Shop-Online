@@ -13,7 +13,10 @@ function App() {
 			<div className='App'>
 				<Nav />
 				<Switch>
-					<Route path='/Sypialnia'>Sypialnia</Route>
+					<Route path='/Sypialnia'>
+						<Main title='Sypialnia' />
+						Sypialnia
+					</Route>
 					<Route path='/Salon'>Salon</Route>
 					<Route path='/Kuchnia'>Kuchnia</Route>
 					<Route path='/Wyprzedaż'>Wyprzedaż</Route>
@@ -22,7 +25,7 @@ function App() {
 					<Route path='/Wyszukiwarka'>Wyszukiwarka</Route>
 					<Route exact path='/'>
 						<Header />
-						<Main />
+						<Main title='Bestsellery' />
 						<SendSection />
 						<Faq />
 					</Route>
