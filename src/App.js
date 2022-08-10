@@ -11,6 +11,8 @@ import Sypialnia from './data/Sypialnia';
 import Salon from './data/Salon';
 import Kuchnia from './data/Kuchnia';
 import Wyprzedaz from './data/Wyprzedaz';
+import Ulubione from './data/Ulubione';
+import Wyszukiwarka from './data/Wyszukiwarka';
 
 function App() {
 	return (
@@ -31,15 +33,22 @@ function App() {
 						<Main title='Wyprzedaż' component={<Wyprzedaz />} />
 					</Route>
 					<Route path='/Koszyk'></Route>
-					<Route path='/Ulubione'></Route>
-					<Route path='/Wyszukiwarka'></Route>
+					<Route path='/Ulubione'>
+						<Main title='Ulubione' component={<Ulubione />} />
+					</Route>
+					<Route path='/Wyszukiwarka'>
+						<Main
+							title='Wyszukaj frazy ...""'
+							component={<Wyszukiwarka />}
+						/>
+					</Route>
 					<Route exact path='/'>
 						<Header />
 						<Main title='Bestsellery' component={<Bestseller />} />
 						<SendSection />
-						<Faq />
 					</Route>
 				</Switch>
+				<Faq />
 				<About />
 				<Footer />
 			</div>
