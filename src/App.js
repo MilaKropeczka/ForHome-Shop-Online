@@ -13,6 +13,7 @@ import Kuchnia from './data/Kuchnia';
 import Wyprzedaz from './data/Wyprzedaz';
 import Ulubione from './data/Ulubione';
 import Wyszukiwarka from './data/Wyszukiwarka';
+import Cart from './components/Cart/Cart';
 
 function App() {
 	return (
@@ -32,7 +33,9 @@ function App() {
 					<Route path='/Wyprzedaż'>
 						<Main title='Wyprzedaż' component={<Wyprzedaz />} />
 					</Route>
-					<Route path='/Koszyk'></Route>
+					<Route path='/Koszyk'>
+						<Cart title='Koszyk' />
+					</Route>
 					<Route path='/Ulubione'>
 						<Main title='Ulubione' component={<Ulubione />} />
 					</Route>
