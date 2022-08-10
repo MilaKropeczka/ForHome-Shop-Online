@@ -6,9 +6,7 @@ function Item(props) {
 	return (
 		<>
 			<li>
-				<Link
-					to={`ForHome/${props.title}`}
-					className={styles[props.className]}>
+				<Link to={`${props.title}`} className={styles[props.className]}>
 					{props.title}
 				</Link>
 			</li>
