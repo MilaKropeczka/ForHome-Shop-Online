@@ -16,7 +16,7 @@ function Accordions(props) {
 				<AccordionItem className={styles.box}>
 					<AccordionItemHeading>
 						<AccordionItemButton>
-							<h4>{props.title}</h4>
+							<h4 className={styles.hover}>{props.title}</h4>
 						</AccordionItemButton>
 					</AccordionItemHeading>
 					<AccordionItemPanel>
