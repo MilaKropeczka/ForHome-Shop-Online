@@ -35,17 +35,16 @@ function Cart(props) {
 			</Row>
 			<hr />
 			<Row>
-				<Col>
+				<Col className='text-center'>
 					<h2 className='text-center m-5'>
 						Podsumowanie:{' '}
-						<span className={styles.font}>{props.sum} zł</span>
-						<br />
-						<button
-							className={`${styles.button} ${styles.primary} mt-lg-4 mx-lg-2 my-4`}>
-							Dostawa i płatność{' '}
-							<i className='fa-solid fa-chevron-right'></i>
-						</button>
+						<span className={`${styles.font}`}>{props.sum} zł</span>
 					</h2>
+					<button
+						className={`${styles.button} ${styles.primary} mt-lg-0 mx-lg-2 my-4`}>
+						Dostawa i płatność{' '}
+						<i className='fa-solid fa-chevron-right'></i>
+					</button>
 				</Col>
 			</Row>
 		</Container>
