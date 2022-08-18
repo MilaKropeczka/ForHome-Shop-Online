@@ -8,14 +8,14 @@ function Box(props) {
 			<div className={`${styles.box}`}>
 				<div className={styles.img}>
 					<i className={`fa-solid fa-heart ${styles.ico}`}></i>
-					<img src={props.img} alt={props.shortContent} />
+					<img src={props.imgSmall} alt={props.shortContent} />
 				</div>
 				<div className={styles.main}>
 					<p className={styles.status + ' ' + styles[props.status]}>
 						{props.status}
 					</p>
 					<h4>{props.title}</h4>
-					<p className={styles[props.statusFont]}>{props.price}</p>
+					<p className={styles[props.statusFont]}>{props.price} zł</p>
 					<p className={styles.newPrice}>{props.newPrice}</p>
 				</div>
 				<div className={styles.buy}>Dodaj do koszyka</div>

@@ -6,6 +6,7 @@ import Item from './Item/Item';
 import styles from './Cart.module.sass';
 import img from '../../assets/Mobile/pillow2.jpg';
 import img1 from '../../assets/Mobile/pillow1.jpg';
+import Koszyk from '../../data/Koszyk';
 
 function Cart(props) {
 	return (
@@ -15,24 +16,7 @@ function Cart(props) {
 					<h2 className='text-center m-5'>{props.title}</h2>
 				</Col>
 			</Row>
-			<hr />
-			<Row className='text-center'>
-				<Item
-					img={img}
-					amount='2'
-					price='29.99 zł'
-					title='Poduszka czerwona serce'
-				/>
-			</Row>
-			<hr />
-			<Row className='text-center'>
-				<Item
-					img={img1}
-					amount='1'
-					price='220.99 zł'
-					title='Buty nike sportowe'
-				/>
-			</Row>
+			<Koszyk />
 			<hr />
 			<Row>
 				<Col className='text-center'>

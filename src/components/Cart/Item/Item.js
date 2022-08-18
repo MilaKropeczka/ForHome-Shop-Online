@@ -7,7 +7,7 @@ function Item(props) {
 	return (
 		<>
 			<Col>
-				<Img img={props.img} />
+				<Img img={props.imgSmall} />
 			</Col>
 			<Col
 				xs={12}
