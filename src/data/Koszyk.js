@@ -20,7 +20,7 @@ function Koszyk() {
 		return maps;
 	};
 
-	return <>{checkCategory()};</>;
+	return <>{checkCategory()}</>;
 }
 
 export default Koszyk;
