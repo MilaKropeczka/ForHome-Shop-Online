@@ -1,23 +1,18 @@
 import React from 'react';
 import Box from '../components/Main/Box/Box';
-import img3 from '../assets/Mobile/sofa.jpg';
+import { arrItems } from './Items';
 
 function Salon() {
-	const arrItems = [
-		{
-			status: 'hit',
-			title: 'Sofa biała',
-			price: '523.99 zł',
-			img: `${img3}`,
-			shortContent: 'Sofa biała',
-			id: 1,
-		},
-	];
+	const checkCategory = () => {
+		const maps = arrItems.map((el) => {
+			if (el.category === 'Salon') {
+				return <Box key={el.id} {...el} />;
+			}
+		});
+		return maps;
+	};
 
-	const maps = arrItems.map((el) => {
-		return <Box key={el.id} {...el} />;
-	});
-	return <>{maps}</>;
+	return <>{checkCategory()};</>;
 }
 
 export default Salon;

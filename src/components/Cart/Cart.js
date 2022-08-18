@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Item from './Item/Item';
 import styles from './Cart.module.sass';
 import img from '../../assets/Mobile/pillow2.jpg';
-import img1 from '../../assets/Mobile/shoes.jpg';
+import img1 from '../../assets/Mobile/pillow1.jpg';
 
 function Cart(props) {
 	return (
