@@ -1,5 +1,6 @@
 import React from 'react';
 import Ico from './Ico/Ico';
+import Notification from './Ico/Notification/Notification';
 
 function DrawerContainer() {
 	return (
@@ -9,7 +10,11 @@ function DrawerContainer() {
 				link='Wyszukiwarka'
 			/>
 			<Ico className={`fa-solid fa-heart px-3`} link='Ulubione' />
-			<Ico className={`fa-solid fa-cart-shopping px-3`} link='Koszyk' />
+			<Ico
+				className={`fa-solid fa-cart-shopping px-3`}
+				link='Koszyk'
+				compontent={<Notification amount='1' />}
+			/>
 		</>
 	);
 }
