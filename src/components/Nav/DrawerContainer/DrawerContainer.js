@@ -13,7 +13,7 @@ function DrawerContainer() {
 			<Ico
 				className={`fa-solid fa-cart-shopping px-3`}
 				link='Koszyk'
-				compontent={<Notification amount='1' />}
+				compontent={<Notification />}
 			/>
 		</>
 	);

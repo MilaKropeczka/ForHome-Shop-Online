@@ -19,7 +19,6 @@ function Koszyk() {
 		});
 		return maps;
 	};
-
 	return <>{checkCategory()}</>;
 }
 

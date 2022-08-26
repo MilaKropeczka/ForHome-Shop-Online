@@ -26,7 +26,7 @@ const arrItems = [
 		imgLarge: false,
 		category: 'Sypialnia',
 		fav: false,
-		amount: 2,
+		amount: 5,
 		cart: true,
 	},
 	{
@@ -43,6 +43,7 @@ const arrItems = [
 		category: 'Sypialnia',
 		fav: false,
 		amount: 1,
+		cart: false,
 	},
 	{
 		id: 3,
@@ -58,6 +59,7 @@ const arrItems = [
 		category: 'Sypialnia',
 		fav: false,
 		amount: 1,
+		cart: false,
 	},
 	{
 		id: 4,
@@ -73,6 +75,7 @@ const arrItems = [
 		category: 'Sypialnia',
 		fav: false,
 		amount: 2,
+		cart: true,
 	},
 	{
 		id: 5,
@@ -88,6 +91,7 @@ const arrItems = [
 		category: 'Sypialnia',
 		fav: false,
 		amount: 1,
+		cart: false,
 	},
 	{
 		id: 6,
@@ -199,7 +203,7 @@ const arrItems = [
 		category: `Kuchnia`,
 		fav: false,
 		amount: 1,
-		cart: true,
+		cart: false,
 	},
 	{
 		id: 13,
@@ -215,7 +219,8 @@ const arrItems = [
 		category: `Kuchnia`,
 		fav: false,
 		amount: 1,
-		cart: true,
+		cart: false,
 	},
 ];
+
 export { arrItems };
