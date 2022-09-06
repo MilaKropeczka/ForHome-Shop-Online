@@ -34,7 +34,7 @@ function App() {
 						<Main title='Wyprzedaż' component={<Wyprzedaz />} />
 					</Route>
 					<Route path='/Koszyk'>
-						<Cart title='Koszyk' totalSum={329} />
+						<Cart title='Koszyk' />
 					</Route>
 					<Route path='/Ulubione'>
 						<Main title='Ulubione' component={<Ulubione />} />

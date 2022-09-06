@@ -3,8 +3,10 @@ import Cart from '../components/Cart/Item/Item';
 import Row from 'react-bootstrap/Row';
 import { arrItems } from './Items';
 
-function Koszyk() {
-	let totalSum;
+// function Koszyk() {
+export let totalSum;
+export function Koszyk() {
+	// let totalSum;
 	const checkCategory = () => {
 		let sum;
 		let sumArr = [];
@@ -41,4 +43,4 @@ function Koszyk() {
 	return <>{checkCategory()}</>;
 }
 
-export default Koszyk;
+// export default Koszyk;

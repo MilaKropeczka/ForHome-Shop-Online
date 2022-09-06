@@ -20,7 +20,7 @@ const arrItems = [
 		title: `Poduszka żółta niebieska`,
 		shortContent: `poduszka na jesień`,
 		content: false,
-		price: 3.99,
+		price: 9.99,
 		newPrice: false, //priceSale
 		imgSmall: `${imgPillow1}`,
 		imgLarge: false,
@@ -68,7 +68,7 @@ const arrItems = [
 		title: `Zestaw czarno-biały`,
 		shortContent: `Komplet poduszek beżowych`,
 		content: false,
-		price: 88.99,
+		price: 49.99,
 		newPrice: false,
 		imgSmall: `${imgPillow4}`,
 		imgLarge: false,
