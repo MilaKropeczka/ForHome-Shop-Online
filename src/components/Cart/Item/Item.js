@@ -42,7 +42,7 @@ function Item(props) {
 				className={`d-flex justify-content-center align-items-center ${styles.fontSize}`}>
 				<p>
 					Cena: <br />
-					<span className={styles.color}>{props.price} zł</span>
+					<span className={styles.color}>{props.sum} zł</span>
 				</p>
 			</Col>
 			<Col
