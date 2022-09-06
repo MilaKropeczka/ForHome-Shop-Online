@@ -20,13 +20,13 @@ const arrItems = [
 		title: `Poduszka żółta niebieska`,
 		shortContent: `poduszka na jesień`,
 		content: false,
-		price: 29.99,
-		newPrice: false,
+		price: 3.99,
+		newPrice: false, //priceSale
 		imgSmall: `${imgPillow1}`,
 		imgLarge: false,
 		category: 'Sypialnia',
 		fav: false,
-		amount: 5,
+		amount: 3,
 		cart: true,
 	},
 	{

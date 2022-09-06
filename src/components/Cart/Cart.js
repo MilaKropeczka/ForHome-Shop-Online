@@ -2,10 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Item from './Item/Item';
 import styles from './Cart.module.sass';
-import img from '../../assets/Mobile/pillow2.jpg';
-import img1 from '../../assets/Mobile/pillow1.jpg';
 import Koszyk from '../../data/Koszyk';
 
 function Cart(props) {
@@ -21,8 +18,10 @@ function Cart(props) {
 			<Row>
 				<Col className='text-center'>
 					<h2 className='text-center m-5'>
-						Podsumowanie:{' '}
-						<span className={`${styles.font}`}>{props.sum} zł</span>
+						Podsumowanie:
+						<span className={`${styles.font}`}>
+							{props.totalSum} zł
+						</span>
 					</h2>
 					<button
 						className={`${styles.button} ${styles.primary} mt-lg-0 mx-lg-2 my-4`}>
