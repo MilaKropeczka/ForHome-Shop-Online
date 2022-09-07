@@ -2,7 +2,7 @@ import Col from 'react-bootstrap/Col';
 import Img from './Img/Img';
 import styles from './Item.module.sass';
 import React, { useState } from 'react';
-import { useEffect } from 'react';
+import { useRef } from 'react';
 
 function Item(props) {
 	const [amount, setAmount] = useState(props.amount);
@@ -18,6 +18,7 @@ function Item(props) {
 		if (amountState < 9 && amountState >= 1) {
 			amountState = amount + 1;
 			setAmount(amountState);
+			ref.current.value = amountState;
 		}
 	};
 
@@ -26,8 +27,11 @@ function Item(props) {
 		if (amountState <= 9 && amountState > 1) {
 			amountState = amount - 1;
 			setAmount(amountState);
+			ref.current.value = amountState;
 		}
 	};
+
+	const ref = useRef(null);
 
 	return (
 		<>
@@ -54,8 +58,9 @@ function Item(props) {
 								className={`fa-solid fa-angle-left ${styles.anim}`}></i>
 						</button>
 						<input
+							ref={ref}
 							className={`m-lg-2 m-1 px-4 py-3 rounded-3 ${styles.backgroundColor}`}
-							defaultValue={amount}></input>
+							defaultValue={amountState}></input>
 						<button
 							className='m-lg-2 m-1 px-4 py-3 rounded-3'
 							onClick={addAmount}>
