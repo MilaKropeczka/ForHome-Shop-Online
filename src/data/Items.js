@@ -27,7 +27,7 @@ const arrItems = [
 		category: 'Sypialnia',
 		fav: false,
 		amount: 4,
-		cart: false,
+		cart: true,
 	},
 	{
 		id: 2,

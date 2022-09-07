@@ -1,57 +1,40 @@
-// import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Img from './Img/Img';
-// import styles from './Item.module.sass';
-// import { arrItems } from '../../../data/Items';
+import styles from './Item.module.sass';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 
-// function Item(props) {
-function Item() {
-	// const [amount, setAmount] = useState(props.amount);
-	// const [amount, setAmount] = useState(false);
+function Item(props) {
+	const [amount, setAmount] = useState(props.amount);
 
-	// const removeWithCart = () => {
-	// 	console.log(`usuń`);
-	// };
+	let amountState = amount;
 
-	// const addAmount = (e) => {
-	// 	e.preventDefault();
-	// 	if (amount < 9 && amount >= 1) {
-	// 		setAmount(amount + 1);
-	// 	}
-	// 	setAmount(true);
-	// 	console.log(amount);
-	// };
+	const removeWithCart = () => {
+		console.log(`usuń`);
+	};
 
-	// const removeAmount = (e) => {
-	// 	e.preventDefault();
-	// 	if (amount <= 9 && amount > 1) {
-	// 		setAmount(amount - 1);
-	// 	}
-	// 	console.log(amount);
-	// };
-	const [count, setCount] = useState(false);
+	const addAmount = (e) => {
+		e.preventDefault();
+		if (amountState < 9 && amountState >= 1) {
+			amountState = amount + 1;
+			setAmount(amountState);
+		}
+	};
 
-	console.log(count);
-	function checkCount() {
-		const countTest = true;
-		setCount(countTest);
-		console.log(countTest);
-	}
+	const removeAmount = (e) => {
+		e.preventDefault();
+		if (amountState <= 9 && amountState > 1) {
+			amountState = amount - 1;
+			setAmount(amountState);
+		}
+	};
 
 	return (
 		<>
 			<Col>
-				<button
-					className='m-lg-2 m-1 px-4 py-3 rounded-3'
-					onClick={checkCount}>
-					PLUS
-				</button>
-
-				{/* <Img img={props.imgSmall} /> */}
+				<Img img={props.imgSmall} />
 			</Col>
-			{/* <Col
+			<Col
 				xs={12}
 				sm
 				className={`d-flex justify-content-center align-items-center ${styles.fontTitle} my-5 ${styles.bold}`}>
@@ -98,7 +81,7 @@ function Item() {
 				<i
 					className={`fa-solid fa-trash-can ${styles.ico}`}
 					onClick={removeWithCart}></i>
-			</Col> */}
+			</Col>
 		</>
 	);
 }
