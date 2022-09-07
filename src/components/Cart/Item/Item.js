@@ -4,6 +4,10 @@ import Img from './Img/Img';
 import styles from './Item.module.sass';
 
 function Item(props) {
+	const addAmount = (e) => {
+		e.preventDefault();
+		console.log(`add`);
+	};
 	return (
 		<>
 			<Col>
@@ -29,7 +33,9 @@ function Item(props) {
 						<input
 							className={`m-lg-2 m-1 px-4 py-3 rounded-3 ${styles.backgroundColor}`}
 							defaultValue={`${props.amount}`}></input>
-						<button className='m-lg-2 m-1 px-4 py-3 rounded-3'>
+						<button
+							className='m-lg-2 m-1 px-4 py-3 rounded-3'
+							onClick={addAmount}>
 							<i
 								className={`fa-solid fa-angle-right ${styles.anim}`}></i>
 						</button>

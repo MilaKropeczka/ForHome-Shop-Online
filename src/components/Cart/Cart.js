@@ -12,9 +12,6 @@ function Cart(props) {
 	useEffect(() => {
 		setState(` ${totalSum} `);
 	});
-	// useEffect(() => {
-	// fetch(url).then((newState) => setState(newState));
-	// }, []);
 
 	return (
 		<Container fluid='lg'>
