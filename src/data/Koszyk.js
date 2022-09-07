@@ -7,6 +7,7 @@ import { arrItems } from './Items';
 export let totalSum;
 export function Koszyk() {
 	// let totalSum;
+
 	const checkCategory = () => {
 		let sum;
 		let sumArr = [];
@@ -29,12 +30,12 @@ export function Koszyk() {
 
 			if (el.cart === true) {
 				return (
-					<>
+					<div key={el.id}>
 						<hr />
 						<Row className='text-center'>
-							<Cart key={el.id} {...el} sum={sum} />
+							<Cart {...el} sum={sum} />
 						</Row>
-					</>
+					</div>
 				);
 			}
 		});

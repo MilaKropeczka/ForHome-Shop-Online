@@ -1,33 +1,57 @@
 // import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Img from './Img/Img';
-import styles from './Item.module.sass';
+// import styles from './Item.module.sass';
 // import { arrItems } from '../../../data/Items';
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useState } from 'react';
+import { useEffect } from 'react';
 
-function Item(props) {
-	const [amount, setAmount] = useState(1);
+// function Item(props) {
+function Item() {
+	// const [amount, setAmount] = useState(props.amount);
+	// const [amount, setAmount] = useState(false);
 
-	const addAmount = (e) => {
-		e.preventDefault();
-		if (amount < 9) {
-			setAmount(amount + 1);
-		}
-	};
+	// const removeWithCart = () => {
+	// 	console.log(`usuń`);
+	// };
 
-	const removeAmount = (e) => {
-		e.preventDefault();
-		if (amount < 9) {
-			setAmount(amount - 1);
-		}
-	};
+	// const addAmount = (e) => {
+	// 	e.preventDefault();
+	// 	if (amount < 9 && amount >= 1) {
+	// 		setAmount(amount + 1);
+	// 	}
+	// 	setAmount(true);
+	// 	console.log(amount);
+	// };
+
+	// const removeAmount = (e) => {
+	// 	e.preventDefault();
+	// 	if (amount <= 9 && amount > 1) {
+	// 		setAmount(amount - 1);
+	// 	}
+	// 	console.log(amount);
+	// };
+	const [count, setCount] = useState(false);
+
+	console.log(count);
+	function checkCount() {
+		const countTest = true;
+		setCount(countTest);
+		console.log(countTest);
+	}
 
 	return (
 		<>
 			<Col>
-				<Img img={props.imgSmall} />
+				<button
+					className='m-lg-2 m-1 px-4 py-3 rounded-3'
+					onClick={checkCount}>
+					PLUS
+				</button>
+
+				{/* <Img img={props.imgSmall} /> */}
 			</Col>
-			<Col
+			{/* <Col
 				xs={12}
 				sm
 				className={`d-flex justify-content-center align-items-center ${styles.fontTitle} my-5 ${styles.bold}`}>
@@ -48,7 +72,7 @@ function Item(props) {
 						</button>
 						<input
 							className={`m-lg-2 m-1 px-4 py-3 rounded-3 ${styles.backgroundColor}`}
-							value={amount}></input>
+							defaultValue={amount}></input>
 						<button
 							className='m-lg-2 m-1 px-4 py-3 rounded-3'
 							onClick={addAmount}>
@@ -71,8 +95,10 @@ function Item(props) {
 				xs={12}
 				sm
 				className={`d-flex justify-content-center align-items-center ${styles.fontSize}`}>
-				<i className={`fa-solid fa-trash-can ${styles.ico}`}></i>
-			</Col>
+				<i
+					className={`fa-solid fa-trash-can ${styles.ico}`}
+					onClick={removeWithCart}></i>
+			</Col> */}
 		</>
 	);
 }
