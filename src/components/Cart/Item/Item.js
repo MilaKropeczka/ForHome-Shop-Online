@@ -1,13 +1,27 @@
-import React from 'react';
+// import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Img from './Img/Img';
 import styles from './Item.module.sass';
+// import { arrItems } from '../../../data/Items';
+import React, { useEffect, useState, useContext } from 'react';
 
 function Item(props) {
+	const [amount, setAmount] = useState(1);
+
 	const addAmount = (e) => {
 		e.preventDefault();
-		console.log(`add`);
+		if (amount < 9) {
+			setAmount(amount + 1);
+		}
 	};
+
+	const removeAmount = (e) => {
+		e.preventDefault();
+		if (amount < 9) {
+			setAmount(amount - 1);
+		}
+	};
+
 	return (
 		<>
 			<Col>
@@ -26,13 +40,15 @@ function Item(props) {
 				<div>
 					<form>
 						Ilość: <br />
-						<button className='m-lg-2 m-1 px-4 py-3 rounded-3'>
+						<button
+							className='m-lg-2 m-1 px-4 py-3 rounded-3'
+							onClick={removeAmount}>
 							<i
 								className={`fa-solid fa-angle-left ${styles.anim}`}></i>
 						</button>
 						<input
 							className={`m-lg-2 m-1 px-4 py-3 rounded-3 ${styles.backgroundColor}`}
-							defaultValue={`${props.amount}`}></input>
+							value={amount}></input>
 						<button
 							className='m-lg-2 m-1 px-4 py-3 rounded-3'
 							onClick={addAmount}>

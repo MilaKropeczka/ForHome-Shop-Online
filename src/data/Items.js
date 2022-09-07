@@ -11,6 +11,9 @@ import imgMug2 from '../assets/Mobile/mug2.jpg';
 import imgMug3 from '../assets/Mobile/mug3.jpg';
 import imgMug4 from '../assets/Mobile/mug4.jpg';
 import imgMug7 from '../assets/Mobile/mug7.jpg';
+// import React, { useEffect, useState } from 'react';
+
+// const [amount, setAmount] = useState(0);
 
 const arrItems = [
 	{
@@ -26,7 +29,8 @@ const arrItems = [
 		imgLarge: false,
 		category: 'Sypialnia',
 		fav: false,
-		amount: 3,
+		// amount: 3,
+		// amount: useState(3),
 		cart: true,
 	},
 	{

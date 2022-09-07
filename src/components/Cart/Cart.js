@@ -1,11 +1,9 @@
-// import React from 'react';
 import React, { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import styles from './Cart.module.sass';
-// import Koszyk from '../../data/Koszyk';
-import { Koszyk as Koszyk, totalSum as totalSum } from '../../data/Koszyk';
+import { Koszyk, totalSum } from '../../data/Koszyk';
 
 function Cart(props) {
 	const [state, setState] = useState('...');
