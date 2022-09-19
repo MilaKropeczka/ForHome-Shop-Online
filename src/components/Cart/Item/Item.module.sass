@@ -3,10 +3,14 @@
 .fontTitle
     font-size: 1.8em
     text-transform: uppercase
+    @media only screen and (min-width: $sm) and (max-width: $md)
+        font-size: 1.6em
 
 .fontSize
     font-weight: 500
     font-size: 1.4em
+    @media only screen and (min-width: $sm) and (max-width: $md)
+        font-size: 1em
 
 .color
     color: $primary
@@ -17,6 +21,8 @@
     padding: 20px
     font-size: 2rem
     transition: .2s
+    @media only screen and (min-width: $sm) and (max-width: $md)
+        padding: 10px
 .ico:hover
     cursor: pointer
     color: $primary
@@ -38,3 +44,5 @@ button:active > .anim
     background-color: #faf7f5
     border: none
     width: 40px
+    @media only screen and (min-width: $sm) and (max-width: $md)
+        width: 30px

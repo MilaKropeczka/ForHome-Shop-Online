@@ -1,4 +1,5 @@
 import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 import Img from './Img/Img';
 import styles from './Item.module.sass';
 import React, { useState } from 'react';
@@ -52,17 +53,21 @@ function Item(props) {
 					<form>
 						Ilość: <br />
 						<button
-							className='m-lg-2 m-1 px-4 py-3 rounded-3'
+							className='m-lg-2 m-1 px-4 px-sm-3 px-lg-4 py-3 rounded-3'
 							onClick={removeAmount}>
 							<i
 								className={`fa-solid fa-angle-left ${styles.anim}`}></i>
 						</button>
 						<input
 							ref={ref}
-							className={`m-lg-2 m-1 px-4 py-3 rounded-3 ${styles.backgroundColor}`}
+							className={`m-lg-2 m-1 m-sm-0 px-4 px-sm-3 px-md-4 py-3 rounded-3 ${styles.backgroundColor}`}
 							defaultValue={amountState}></input>
+						{/* <input
+							ref={ref}
+							className={`m-lg-2 m-1 px-4 py-3 rounded-3 ${styles.backgroundColor}`}
+							defaultValue={amountState}></input> */}
 						<button
-							className='m-lg-2 m-1 px-4 py-3 rounded-3'
+							className='m-lg-2 m-1 px-4 px-sm-3 px-lg-4 py-3 rounded-3'
 							onClick={addAmount}>
 							<i
 								className={`fa-solid fa-angle-right ${styles.anim}`}></i>
@@ -81,7 +86,7 @@ function Item(props) {
 			</Col>
 			<Col
 				xs={12}
-				sm
+				sm={1}
 				className={`d-flex justify-content-center align-items-center ${styles.fontSize}`}>
 				<i
 					className={`fa-solid fa-trash-can ${styles.ico}`}
