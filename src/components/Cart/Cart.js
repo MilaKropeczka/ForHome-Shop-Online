@@ -11,14 +11,9 @@ function Cart(props) {
 		setState(` ${totalSum} `);
 	}, []);
 
-	const testowo = () => {
-		console.log(`first`);
-	};
-
 	return (
 		<Container fluid='lg'>
 			<Row>
-				{props.handlerItems}
 				<Col>
 					<h2 className='text-center m-5'>{props.title}</h2>
 				</Col>

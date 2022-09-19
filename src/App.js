@@ -10,7 +10,6 @@ import Bestseller from './data/Bestseller';
 import Sypialnia from './data/Sypialnia';
 import Salon from './data/Salon';
 import Kuchnia from './data/Kuchnia';
-import Wyprzedaz from './data/Wyprzedaz';
 import Ulubione from './data/Ulubione';
 import Wyszukiwarka from './data/Wyszukiwarka';
 import Cart from './components/Cart/Cart';
@@ -245,15 +244,11 @@ function App() {
 		},
 	]);
 
-	const mapsItems = () => {
-		// mapItems.map((el) => {
-		// 	console.log(el);
-		// });
-		// const maps = mapItems.map((el) => {
-		// 	console.log(el);
-		// });
-		// return maps;
-	};
+	// const handleMaps = () => {
+	// 	mapItems.map((el) => {
+	// 		console.log(el);
+	// 	});
+	// };
 
 	return (
 		<Router>
@@ -270,10 +265,11 @@ function App() {
 						<Main title='Kuchnia' component={<Kuchnia />} />
 					</Route>
 					<Route path='/Wyprzedaż'>
-						<Main title='Wyprzedaż' component={<Wyprzedaz />} />
+						<Main title='Wyprzedaż' handleState={mapItems} />
 					</Route>
 					<Route path='/Koszyk'>
-						<Cart title='Koszyk' handlerItems={mapsItems()} />
+						{/* <Cart title='Koszyk' handlerItems={mapsItems()} /> */}
+						<Cart title='Koszyk' />
 					</Route>
 					<Route path='/Ulubione'>
 						<Main title='Ulubione' component={<Ulubione />} />

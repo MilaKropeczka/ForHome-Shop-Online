@@ -86,7 +86,7 @@ function Item(props) {
 			</Col>
 			<Col
 				xs={12}
-				sm={1}
+				sm
 				className={`d-flex justify-content-center align-items-center ${styles.fontSize}`}>
 				<i
 					className={`fa-solid fa-trash-can ${styles.ico}`}
