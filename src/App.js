@@ -6,12 +6,13 @@ import Faq from './components/Faq/Faq';
 import About from './components/About/About';
 import Footer from './components/Footer/Footer';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
-import Bestseller from './data/Bestseller';
-import Sypialnia from './data/Sypialnia';
-import Salon from './data/Salon';
-import Kuchnia from './data/Kuchnia';
-import Ulubione from './data/Ulubione';
-import Wyszukiwarka from './data/Wyszukiwarka';
+import Wyszukiwarka from './components/Main/Wyszukiwarka/Wyszukiwarka';
+import Bestseller from './components/Main/Bestseller/Bestseller';
+import Sypialnia from './components/Main/Sypialnia/Sypialnia';
+import Salon from './components/Main/Salon/Salon';
+import Wyprzedaz from './components/Main/Wyprzedaz/Wyprzedaz';
+import Kuchnia from './components/Main/Kuchnia/Kuchnia';
+import Ulubione from './components/Main/Ulubione/Ulubione';
 import Cart from './components/Cart/Cart';
 import React, { useState } from 'react';
 
@@ -30,7 +31,7 @@ import imgMug3 from '../src/assets/Mobile/mug3.jpg';
 import imgMug4 from '../src/assets//Mobile/mug4.jpg';
 import imgMug7 from '../src/assets/Mobile/mug7.jpg';
 
-let totalSum;
+// let totalSum;
 
 function App() {
 	const [mapItems, setMapItems] = useState([
@@ -238,7 +239,7 @@ function App() {
 			imgSmall: `${imgMug7}`,
 			imgLarge: false,
 			category: `Kuchnia`,
-			fav: false,
+			fav: true,
 			amount: 1,
 			cart: false,
 		},
@@ -250,32 +251,50 @@ function App() {
 				<Nav />
 				<Switch>
 					<Route path='/Sypialnia'>
-						<Main title='Sypialnia' component={<Sypialnia />} />
+						<Main
+							title='Sypialnia'
+							component={<Sypialnia handleState={mapItems} />}
+						/>
 					</Route>
 					<Route path='/Salon'>
-						<Main title='Salon' component={<Salon />} />
+						<Main
+							title='Salon'
+							component={<Salon handleState={mapItems} />}
+						/>
 					</Route>
 					<Route path='/Kuchnia'>
-						<Main title='Kuchnia' component={<Kuchnia />} />
+						<Main
+							title='Kuchnia'
+							component={<Kuchnia handleState={mapItems} />}
+						/>
 					</Route>
 					<Route path='/Wyprzedaż'>
-						<Main title='Wyprzedaż' handleState={mapItems} />
+						<Main
+							title='Wyprzedaż'
+							component={<Wyprzedaz handleState={mapItems} />}
+						/>
 					</Route>
 					<Route path='/Koszyk'>
 						<Cart title='Koszyk' />
 					</Route>
 					<Route path='/Ulubione'>
-						<Main title='Ulubione' component={<Ulubione />} />
+						<Main
+							title='Ulubione'
+							component={<Ulubione handleState={mapItems} />}
+						/>
 					</Route>
 					<Route path='/Wyszukiwarka'>
 						<Main
 							title='Wyszukaj frazy ...""'
-							component={<Wyszukiwarka />}
+							component={<Wyszukiwarka handleState={mapItems} />}
 						/>
 					</Route>
 					<Route exact path='/'>
 						<Header />
-						<Main title='Bestsellery' component={<Bestseller />} />
+						<Main
+							title='Bestsellery'
+							component={<Bestseller handleState={mapItems} />}
+						/>
 					</Route>
 				</Switch>
 				<SendSection />

@@ -1,15 +1,15 @@
 import React from 'react';
 import Box from '../Box/Box';
 
-function Wyprzedaz(props) {
+function Kuchnia(props) {
 	const handleState = props.handleState;
 
 	const mapItems = handleState.map((el) => {
-		if (el.status === 'wyprzedaz') {
+		if (el.category === 'Kuchnia') {
 			return <Box key={el.id} {...el} />;
 		}
 	});
 	return mapItems;
 }
 
-export default Wyprzedaz;
+export default Kuchnia;
