@@ -244,12 +244,6 @@ function App() {
 		},
 	]);
 
-	// const handleMaps = () => {
-	// 	mapItems.map((el) => {
-	// 		console.log(el);
-	// 	});
-	// };
-
 	return (
 		<Router>
 			<div className='App'>
@@ -268,7 +262,6 @@ function App() {
 						<Main title='Wyprzedaż' handleState={mapItems} />
 					</Route>
 					<Route path='/Koszyk'>
-						{/* <Cart title='Koszyk' handlerItems={mapsItems()} /> */}
 						<Cart title='Koszyk' />
 					</Route>
 					<Route path='/Ulubione'>
