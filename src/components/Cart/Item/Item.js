@@ -21,6 +21,14 @@ function Item(props) {
 			ref.current.value = amountState;
 		}
 	};
+	// const addAmount = (e) => {
+	// 	e.preventDefault();
+	// 	if (amountState < 9 && amountState >= 1) {
+	// 		amountState = amount + 1;
+	// 		setAmount(amountState);
+	// 		ref.current.value = amountState;
+	// 	}
+	// };
 
 	const removeAmount = (e) => {
 		e.preventDefault();

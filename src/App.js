@@ -248,7 +248,7 @@ function App() {
 	return (
 		<Router>
 			<div className='App'>
-				<Nav />
+				<Nav handleState={mapItems} />
 				<Switch>
 					<Route path='/Sypialnia'>
 						<Main
@@ -275,7 +275,6 @@ function App() {
 						/>
 					</Route>
 					<Route path='/Koszyk'>
-						{/* <Cart title='Koszyk' /> */}
 						<Cart title='Koszyk' handleState={mapItems} />
 					</Route>
 					<Route path='/Ulubione'>

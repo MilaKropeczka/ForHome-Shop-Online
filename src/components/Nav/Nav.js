@@ -10,7 +10,8 @@ import Logo from './Logo/Logo';
 import NavDeskop from './NavDeskop/NavDeskop';
 import { useState } from 'react';
 
-function Nav() {
+function Nav(props) {
+	const handleState = props.handleState;
 	const [isActive, setActive] = useState(false);
 	const menuToggle = () => {
 		setActive(!isActive);
@@ -43,7 +44,7 @@ function Nav() {
 							/>
 						</Col>
 						<Col className={`text-center ${styles.pointer}`}>
-							<DrawerContainer />
+							<DrawerContainer handleState={handleState} />
 						</Col>
 					</Row>
 					<Row
