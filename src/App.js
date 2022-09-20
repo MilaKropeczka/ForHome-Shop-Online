@@ -275,7 +275,8 @@ function App() {
 						/>
 					</Route>
 					<Route path='/Koszyk'>
-						<Cart title='Koszyk' />
+						{/* <Cart title='Koszyk' /> */}
+						<Cart title='Koszyk' handleState={mapItems} />
 					</Route>
 					<Route path='/Ulubione'>
 						<Main

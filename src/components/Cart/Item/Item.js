@@ -1,5 +1,4 @@
 import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
 import Img from './Img/Img';
 import styles from './Item.module.sass';
 import React, { useState } from 'react';
@@ -62,10 +61,6 @@ function Item(props) {
 							ref={ref}
 							className={`m-lg-2 m-1 m-sm-0 px-4 px-sm-3 px-md-4 py-3 rounded-3 ${styles.backgroundColor}`}
 							defaultValue={amountState}></input>
-						{/* <input
-							ref={ref}
-							className={`m-lg-2 m-1 px-4 py-3 rounded-3 ${styles.backgroundColor}`}
-							defaultValue={amountState}></input> */}
 						<button
 							className='m-lg-2 m-1 px-4 px-sm-3 px-lg-4 py-3 rounded-3'
 							onClick={addAmount}>

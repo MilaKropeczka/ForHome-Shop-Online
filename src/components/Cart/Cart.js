@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react';
+// import React, { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import styles from './Cart.module.sass';
-import { Koszyk, totalSum } from '../../data/Koszyk';
+// import { Koszyk, totalSum } from '../../data/Koszyk';
+import Koszyk from './Koszyk/Koszyk';
 
 function Cart(props) {
-	const [state, setState] = useState('...');
-	useEffect(() => {
-		setState(` ${totalSum} `);
-	}, []);
+	const handleState = props.handleState;
+	// const [state, setState] = useState('...');
+	// useEffect(() => {
+	// 	setState(` ${totalSum} `);
+	// }, []);
 
 	return (
 		<Container fluid='lg'>
@@ -18,14 +20,14 @@ function Cart(props) {
 					<h2 className='text-center m-5'>{props.title}</h2>
 				</Col>
 			</Row>
-			<Koszyk />
+			<Koszyk handleState={handleState} />
 			<hr />
 			<Row>
 				<Col className='text-center'>
 					<h2 className='text-center m-5'>
 						Podsumowanie:
 						<span className={`${styles.font}`}>
-							{state}
+							{/* {state} */}
 							zł
 						</span>
 					</h2>
