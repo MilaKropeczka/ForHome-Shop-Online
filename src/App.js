@@ -247,31 +247,20 @@ function App() {
 
 	const addAmount = function (e) {
 		e.preventDefault();
-		console.log(
+		// console.log(
+		// 	e.target.parentNode.parentNode.parentNode.parentNode.parentNode.getAttribute(
+		// 		'name'
+		// 	)
+		// );
+		let number =
 			e.target.parentNode.parentNode.parentNode.parentNode.parentNode.getAttribute(
 				'name'
-			)
-		);
-		let updateItems = [
-			...mapItems,
-			{
-				id: 13,
-				status: `wyprzedaz`,
-				statusFont: 'through',
-				title: `Brązowy matowy kubek`,
-				shortContent: `Brązowy matowy kubek`,
-				content: false,
-				price: 17.99,
-				newPrice: `14.99 zł`,
-				imgSmall: `${imgMug7}`,
-				imgLarge: false,
-				category: `Kuchnia`,
-				fav: true,
-				amount: 2,
-				cart: false,
-			},
-		];
+			);
+		let updateItems = [...mapItems];
+		console.log(updateItems);
+		updateItems.splice(number, 1);
 		setMapItems(updateItems);
+		console.log(updateItems);
 		// console.log(mapItems);
 		// setMapItems(
 		// 	mapItems.map((el) => {
