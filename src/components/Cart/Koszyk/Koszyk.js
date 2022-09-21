@@ -25,7 +25,7 @@ function Kuchnia(props) {
 			totalSum = parseFloat(totalSum).toFixed(2);
 
 			return (
-				<div key={el.id} name={el.id}>
+				<div key={el.id}>
 					<hr />
 					<Row className='text-center'>
 						<Item

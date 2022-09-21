@@ -5,55 +5,12 @@ import React, { useState } from 'react';
 import { useRef } from 'react';
 
 function Item(props) {
-	const handleState = props.handleState;
 	const addAmount = props.addAmount;
 
-	// const [amount, setAmount] = useState(props.amount);
-
-	// let amountState = amount;
-
-	//TO NIE TRZEBA VV
-	// const mapItems = handleState.map((el) => {
-	// 	if (el.cart === true) {
-	// 	}
-	// });
-
-	// const addAmount = (e) => {
-	// e.preventDefault();
-	// handleState.map((el) => {
-	// 	if (el.cart === true) {
-	// 		console.log(el.amount);
-
-	// 		// let amount = el.amount;
-	// 		// amount = setHandleState(el.amount + 1);
-	// 		// console.log(amount);
-	// 	}
-	// });
-	// };
-	// const addAmount = (e) => {
-	// 	e.preventDefault();
-	// 	if (amountState < 9 && amountState >= 1) {
-	// 		amountState = amount + 1;
-	// 		setAmount(amountState);
-	// 		ref.current.value = amountState;
-	// 	}
-	// };
-
-	// const removeWithCart = () => {
-	// 	console.log(`usuń`);
-	// };
 	const removeWithCart = () => {
 		console.log(`usuń`);
 	};
 
-	// const removeAmount = (e) => {
-	// 	e.preventDefault();
-	// 	if (amountState <= 9 && amountState > 1) {
-	// 		amountState = amount - 1;
-	// 		setAmount(amountState);
-	// 		ref.current.value = amountState;
-	// 	}
-	// };
 	const removeAmount = (e) => {
 		e.preventDefault();
 		console.log(`<`);
@@ -95,9 +52,11 @@ function Item(props) {
 							defaultValue={amountState}></input> */}
 						<button
 							className='m-lg-2 m-1 px-4 px-sm-3 px-lg-4 py-3 rounded-3'
-							onClick={addAmount}>
+							onClick={addAmount}
+							name={props.id}>
 							<i
-								className={`fa-solid fa-angle-right ${styles.anim}`}></i>
+								className={`fa-solid fa-angle-right ${styles.anim}`}
+								name={props.id}></i>
 						</button>
 					</form>
 				</div>

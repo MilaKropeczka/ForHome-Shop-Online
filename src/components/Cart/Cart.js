@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -8,10 +7,6 @@ import Koszyk from './Koszyk/Koszyk';
 function Cart(props) {
 	const addAmount = props.addAmount;
 	const handleState = props.handleState;
-	// const [state, setState] = useState('...');
-	// useEffect(() => {
-	// 	setState(` ${totalSum} `);
-	// }, []);
 
 	return (
 		<Container fluid='lg'>

@@ -31,8 +31,6 @@ import imgMug3 from '../src/assets/Mobile/mug3.jpg';
 import imgMug4 from '../src/assets//Mobile/mug4.jpg';
 import imgMug7 from '../src/assets/Mobile/mug7.jpg';
 
-// let totalSum;
-
 function App() {
 	const [mapItems, setMapItems] = useState([
 		{
@@ -247,28 +245,14 @@ function App() {
 
 	const addAmount = function (e) {
 		e.preventDefault();
-		// console.log(
-		// 	e.target.parentNode.parentNode.parentNode.parentNode.parentNode.getAttribute(
-		// 		'name'
-		// 	)
-		// );
-		let number =
-			e.target.parentNode.parentNode.parentNode.parentNode.parentNode.getAttribute(
-				'name'
-			);
-		let updateItems = [...mapItems];
-		console.log(updateItems);
-		updateItems.splice(number, 1);
-		setMapItems(updateItems);
-		console.log(updateItems);
-		// console.log(mapItems);
-		// setMapItems(
-		// 	mapItems.map((el) => {
-		// 		if (el.cart === true) {
 
-		// 		}
-		// 	})
-		// );
+		let updateItems = [...mapItems];
+		let editItems = updateItems[e.target.getAttribute('name')];
+		let nameItems = updateItems[e.target.getAttribute('name')].id;
+		editItems.amount = editItems.amount + 1;
+		updateItems.splice(nameItems, 1, editItems);
+		setMapItems(updateItems);
+		console.log(mapItems[0].amount);
 	};
 
 	return (
