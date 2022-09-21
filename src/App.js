@@ -36,7 +36,7 @@ import imgMug7 from '../src/assets/Mobile/mug7.jpg';
 function App() {
 	const [mapItems, setMapItems] = useState([
 		{
-			id: 1,
+			id: 0,
 			status: false,
 			statusFont: 'normal',
 			title: `Poduszka żółta niebieska`,
@@ -52,7 +52,7 @@ function App() {
 			cart: true,
 		},
 		{
-			id: 2,
+			id: 1,
 			status: false,
 			statusFont: 'normal',
 			title: `Poduszka serce walentynki`,
@@ -68,7 +68,7 @@ function App() {
 			cart: false,
 		},
 		{
-			id: 3,
+			id: 2,
 			status: `hit`,
 			statusFont: 'normal',
 			title: `Komplet poduszek beżowych`,
@@ -84,7 +84,7 @@ function App() {
 			cart: false,
 		},
 		{
-			id: 4,
+			id: 3,
 			status: false,
 			statusFont: 'normal',
 			title: `Zestaw czarno-biały`,
@@ -100,7 +100,7 @@ function App() {
 			cart: true,
 		},
 		{
-			id: 5,
+			id: 4,
 			status: 'wyprzedaz',
 			statusFont: 'through',
 			title: `Komplet poduszek kolorowe`,
@@ -116,7 +116,7 @@ function App() {
 			cart: false,
 		},
 		{
-			id: 6,
+			id: 5,
 			status: 'hit',
 			statusFont: 'normal',
 			title: `Świeczka kwiat`,
@@ -132,7 +132,7 @@ function App() {
 			cart: false,
 		},
 		{
-			id: 7,
+			id: 6,
 			status: `wyprzedaz`,
 			statusFont: 'through',
 			title: `Zestaw świec z gwiazdą`,
@@ -148,7 +148,7 @@ function App() {
 			cart: false,
 		},
 		{
-			id: 8,
+			id: 7,
 			status: false,
 			statusFont: 'normal',
 			title: `Świeczki losowe kolory`,
@@ -164,7 +164,7 @@ function App() {
 			cart: false,
 		},
 		{
-			id: 9,
+			id: 8,
 			status: `hit`,
 			statusFont: 'normal',
 			title: `Duża świeczka różana`,
@@ -180,7 +180,7 @@ function App() {
 			cart: false,
 		},
 		{
-			id: 10,
+			id: 9,
 			status: `hit`,
 			statusFont: 'normal',
 			title: `Turkusowy kubek`,
@@ -196,7 +196,7 @@ function App() {
 			cart: false,
 		},
 		{
-			id: 11,
+			id: 10,
 			status: `wyprzedaz`,
 			statusFont: 'through',
 			title: `Beżowy kubek serce`,
@@ -212,7 +212,7 @@ function App() {
 			cart: false,
 		},
 		{
-			id: 12,
+			id: 11,
 			status: false,
 			statusFont: 'normal',
 			title: `coffe saves kubek`,
@@ -228,7 +228,7 @@ function App() {
 			cart: false,
 		},
 		{
-			id: 13,
+			id: 12,
 			status: `wyprzedaz`,
 			statusFont: 'through',
 			title: `Brązowy matowy kubek`,
@@ -244,6 +244,43 @@ function App() {
 			cart: false,
 		},
 	]);
+
+	const addAmount = function (e) {
+		e.preventDefault();
+		console.log(
+			e.target.parentNode.parentNode.parentNode.parentNode.parentNode.getAttribute(
+				'name'
+			)
+		);
+		let updateItems = [
+			...mapItems,
+			{
+				id: 13,
+				status: `wyprzedaz`,
+				statusFont: 'through',
+				title: `Brązowy matowy kubek`,
+				shortContent: `Brązowy matowy kubek`,
+				content: false,
+				price: 17.99,
+				newPrice: `14.99 zł`,
+				imgSmall: `${imgMug7}`,
+				imgLarge: false,
+				category: `Kuchnia`,
+				fav: true,
+				amount: 2,
+				cart: false,
+			},
+		];
+		setMapItems(updateItems);
+		// console.log(mapItems);
+		// setMapItems(
+		// 	mapItems.map((el) => {
+		// 		if (el.cart === true) {
+
+		// 		}
+		// 	})
+		// );
+	};
 
 	return (
 		<Router>
@@ -275,7 +312,11 @@ function App() {
 						/>
 					</Route>
 					<Route path='/Koszyk'>
-						<Cart title='Koszyk' handleState={mapItems} />
+						<Cart
+							title='Koszyk'
+							handleState={mapItems}
+							addAmount={addAmount}
+						/>
 					</Route>
 					<Route path='/Ulubione'>
 						<Main

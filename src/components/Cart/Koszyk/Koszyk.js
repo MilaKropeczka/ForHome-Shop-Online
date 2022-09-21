@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 
 function Kuchnia(props) {
 	const handleState = props.handleState;
+	const addAmount = props.addAmount;
 	let totalSum;
 	let sum;
 	let sumArr = [];
@@ -24,10 +25,15 @@ function Kuchnia(props) {
 			totalSum = parseFloat(totalSum).toFixed(2);
 
 			return (
-				<div key={el.id}>
+				<div key={el.id} name={el.id}>
 					<hr />
 					<Row className='text-center'>
-						<Item {...el} sum={sum} />
+						<Item
+							{...el}
+							sum={sum}
+							handleState={handleState}
+							addAmount={addAmount}
+						/>
 					</Row>
 				</div>
 			);

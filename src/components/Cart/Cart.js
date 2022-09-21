@@ -1,12 +1,12 @@
-// import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import styles from './Cart.module.sass';
-// import { Koszyk, totalSum } from '../../data/Koszyk';
 import Koszyk from './Koszyk/Koszyk';
 
 function Cart(props) {
+	const addAmount = props.addAmount;
 	const handleState = props.handleState;
 	// const [state, setState] = useState('...');
 	// useEffect(() => {
@@ -20,7 +20,7 @@ function Cart(props) {
 					<h2 className='text-center m-5'>{props.title}</h2>
 				</Col>
 			</Row>
-			<Koszyk handleState={handleState} />
+			<Koszyk handleState={handleState} addAmount={addAmount} />
 			<hr />
 			<Row>
 				<Col className='text-center'>
