@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 function Kuchnia(props) {
 	const handleState = props.handleState;
 	const addAmount = props.addAmount;
+	const removeAmount = props.removeAmount;
 	let totalSum;
 	let sum;
 	let sumArr = [];
@@ -33,6 +34,9 @@ function Kuchnia(props) {
 							sum={sum}
 							handleState={handleState}
 							addAmount={addAmount}
+							removeAmount={removeAmount}
+							refState={props.refState}
+							el={el}
 						/>
 					</Row>
 				</div>

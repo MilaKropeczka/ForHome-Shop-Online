@@ -6,6 +6,7 @@ import Koszyk from './Koszyk/Koszyk';
 
 function Cart(props) {
 	const addAmount = props.addAmount;
+	const removeAmount = props.removeAmount;
 	const handleState = props.handleState;
 
 	return (
@@ -15,7 +16,12 @@ function Cart(props) {
 					<h2 className='text-center m-5'>{props.title}</h2>
 				</Col>
 			</Row>
-			<Koszyk handleState={handleState} addAmount={addAmount} />
+			<Koszyk
+				handleState={handleState}
+				addAmount={addAmount}
+				removeAmount={removeAmount}
+				refState={props.refState}
+			/>
 			<hr />
 			<Row>
 				<Col className='text-center'>

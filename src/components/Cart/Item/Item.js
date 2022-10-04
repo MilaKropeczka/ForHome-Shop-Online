@@ -6,17 +6,28 @@ import { useRef } from 'react';
 
 function Item(props) {
 	const addAmount = props.addAmount;
+	const removeAmount = props.removeAmount;
+	// const amount = props.amount;
+	// const ref = useRef(null);
+	// const el = props.el;
+	// const ref = props.ref;
+	let number = props.amount;
 
-	const removeWithCart = () => {
+	// const ref = useRef(null);
+	// let number = 1;
+	// function add(e) {
+	// 	e.preventDefault();
+	// 	number = ref.current.value;
+	// 	number = parseFloat(number);
+	// 	number += 1;
+	// 	ref.current.value = number;
+	// 	console.log(`${number} = ${typeof number}`);
+	// }
+
+	const removeWithCart = (e) => {
 		console.log(`usuń`);
+		console.log(props.amount);
 	};
-
-	const removeAmount = (e) => {
-		e.preventDefault();
-		console.log(`<`);
-	};
-
-	const ref = useRef(null);
 
 	return (
 		<>
@@ -38,18 +49,16 @@ function Item(props) {
 						Ilość: <br />
 						<button
 							className='m-lg-2 m-1 px-4 px-sm-3 px-lg-4 py-3 rounded-3'
-							onClick={removeAmount}>
+							onClick={removeAmount}
+							name={props.id}>
 							<i
-								className={`fa-solid fa-angle-left ${styles.anim}`}></i>
+								className={`fa-solid fa-angle-left ${styles.anim}`}
+								name={props.id}></i>
 						</button>
 						<input
-							ref={ref}
+							ref={props.refState}
 							className={`m-lg-2 m-1 m-sm-0 px-4 px-sm-3 px-md-4 py-3 rounded-3 ${styles.backgroundColor}`}
-							defaultValue={`1`}></input>
-						{/* <input
-							ref={ref}
-							className={`m-lg-2 m-1 m-sm-0 px-4 px-sm-3 px-md-4 py-3 rounded-3 ${styles.backgroundColor}`}
-							defaultValue={amountState}></input> */}
+							defaultValue={number}></input>
 						<button
 							className='m-lg-2 m-1 px-4 px-sm-3 px-lg-4 py-3 rounded-3'
 							onClick={addAmount}
@@ -59,6 +68,18 @@ function Item(props) {
 								name={props.id}></i>
 						</button>
 					</form>
+					{/* <form>
+						<button
+							className='m-lg-2 m-1 px-4 px-sm-3 px-lg-4 py-3 rounded-3'
+							onClick={add}>
+							+
+						</button>
+						<input
+							ref={ref}
+							className={`m-lg-2 m-1 m-sm-0 px-4 px-sm-3 px-md-4 py-3 rounded-3 ${styles.backgroundColor}`}
+							defaultValue={number}
+						/>
+					</form> */}
 				</div>
 			</Col>
 			<Col

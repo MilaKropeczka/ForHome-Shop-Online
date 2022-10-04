@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Notification.module.sass';
 // import SumAmount from '../../../../../data/SumAmount';
 
