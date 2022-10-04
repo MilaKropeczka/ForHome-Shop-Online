@@ -55,10 +55,14 @@ function Item(props) {
 								className={`fa-solid fa-angle-left ${styles.anim}`}
 								name={props.id}></i>
 						</button>
-						<input
+						{/* <input
 							ref={props.refState}
 							className={`m-lg-2 m-1 m-sm-0 px-4 px-sm-3 px-md-4 py-3 rounded-3 ${styles.backgroundColor}`}
-							defaultValue={number}></input>
+							defaultValue={props.amount}></input> */}
+						<div
+							className={`m-lg-2 m-1 m-sm-0 px-4 px-sm-3 px-md-4 py-3 rounded-3 ${styles.backgroundColor} d-inline`}>
+							{props.amount}
+						</div>
 						<button
 							className='m-lg-2 m-1 px-4 px-sm-3 px-lg-4 py-3 rounded-3'
 							onClick={addAmount}

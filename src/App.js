@@ -258,15 +258,15 @@ function App() {
 	const addAmount = function (e) {
 		e.preventDefault();
 		// ref.current.map((el) => console.log(el));
-		// console.log(ref.current);
+		console.log(ref.current);
 		// console.log(e.target);
 
-		// let updateItems = [...mapItems];
-		// let editItems = updateItems[e.target.getAttribute('name')];
-		// let nameItems = updateItems[e.target.getAttribute('name')].id;
-		// editItems.amount = editItems.amount + 1;
-		// updateItems.splice(nameItems, 1, editItems);
-		// setMapItems(updateItems);
+		let updateItems = [...mapItems];
+		let editItems = updateItems[e.target.getAttribute('name')];
+		let nameItems = updateItems[e.target.getAttribute('name')].id;
+		editItems.amount = editItems.amount + 1;
+		updateItems.splice(nameItems, 1, editItems);
+		setMapItems(updateItems);
 
 		// 	number = ref.current.value;
 		// 	number = parseFloat(number);
