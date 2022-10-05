@@ -275,7 +275,13 @@ function App() {
 					<Route path='/Sypialnia'>
 						<Main
 							title='Sypialnia'
-							component={<Sypialnia handleState={mapItems} />}
+							// component={<Sypialnia handleState={mapItems} />}
+							component={
+								<Sypialnia
+									handleState={mapItems}
+									setHandleState={setMapItems}
+								/>
+							}
 						/>
 					</Route>
 					<Route path='/Salon'>
