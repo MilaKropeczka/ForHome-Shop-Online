@@ -30,6 +30,7 @@ function Kuchnia(props) {
 							{...el}
 							sum={sum}
 							handleState={props.handleState}
+							setHandleState={props.setHandleState}
 							addAmount={props.addAmount}
 							removeAmount={props.removeAmount}
 							el={el}

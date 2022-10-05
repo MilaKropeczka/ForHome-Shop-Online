@@ -275,7 +275,6 @@ function App() {
 					<Route path='/Sypialnia'>
 						<Main
 							title='Sypialnia'
-							// component={<Sypialnia handleState={mapItems} />}
 							component={
 								<Sypialnia
 									handleState={mapItems}
@@ -287,25 +286,41 @@ function App() {
 					<Route path='/Salon'>
 						<Main
 							title='Salon'
-							component={<Salon handleState={mapItems} />}
+							component={
+								<Salon
+									handleState={mapItems}
+									setHandleState={setMapItems}
+								/>
+							}
 						/>
 					</Route>
 					<Route path='/Kuchnia'>
 						<Main
 							title='Kuchnia'
-							component={<Kuchnia handleState={mapItems} />}
+							component={
+								<Kuchnia
+									handleState={mapItems}
+									setHandleState={setMapItems}
+								/>
+							}
 						/>
 					</Route>
 					<Route path='/Wyprzedaż'>
 						<Main
 							title='Wyprzedaż'
-							component={<Wyprzedaz handleState={mapItems} />}
+							component={
+								<Wyprzedaz
+									handleState={mapItems}
+									setHandleState={setMapItems}
+								/>
+							}
 						/>
 					</Route>
 					<Route path='/Koszyk'>
 						<Cart
 							title='Koszyk'
 							handleState={mapItems}
+							setHandleState={setMapItems}
 							addAmount={addAmount}
 							removeAmount={removeAmount}
 						/>
@@ -313,20 +328,35 @@ function App() {
 					<Route path='/Ulubione'>
 						<Main
 							title='Ulubione'
-							component={<Ulubione handleState={mapItems} />}
+							component={
+								<Ulubione
+									handleState={mapItems}
+									setHandleState={setMapItems}
+								/>
+							}
 						/>
 					</Route>
 					<Route path='/Wyszukiwarka'>
 						<Main
 							title='Wyszukaj frazy ...""'
-							component={<Wyszukiwarka handleState={mapItems} />}
+							component={
+								<Wyszukiwarka
+									handleState={mapItems}
+									setHandleState={setMapItems}
+								/>
+							}
 						/>
 					</Route>
 					<Route exact path='/'>
 						<Header />
 						<Main
 							title='Bestsellery'
-							component={<Bestseller handleState={mapItems} />}
+							component={
+								<Bestseller
+									handleState={mapItems}
+									setHandleState={setMapItems}
+								/>
+							}
 						/>
 					</Route>
 				</Switch>

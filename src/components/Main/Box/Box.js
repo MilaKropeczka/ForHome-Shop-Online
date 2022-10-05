@@ -6,10 +6,8 @@ function Box(props) {
 	function addItem() {
 		let updateItems = [...props.handleState];
 		let editItems = updateItems[props.id];
-		console.log(editItems.cart);
 		editItems.cart = true;
 		updateItems.splice(props.id, 1, editItems);
-		console.log(editItems.cart);
 		props.setHandleState(updateItems);
 	}
 	return (

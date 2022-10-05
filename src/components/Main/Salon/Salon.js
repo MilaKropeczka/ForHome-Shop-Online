@@ -2,11 +2,16 @@ import React from 'react';
 import Box from '../Box/Box';
 
 function Salon(props) {
-	const handleState = props.handleState;
-
-	const mapItems = handleState.map((el) => {
+	const mapItems = props.handleState.map((el) => {
 		if (el.category === 'Salon') {
-			return <Box key={el.id} {...el} />;
+			return (
+				<Box
+					key={el.id}
+					{...el}
+					handleState={props.handleState}
+					setHandleState={props.setHandleState}
+				/>
+			);
 		}
 	});
 	return mapItems;
