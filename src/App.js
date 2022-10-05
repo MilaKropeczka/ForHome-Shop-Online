@@ -14,7 +14,7 @@ import Wyprzedaz from './components/Main/Wyprzedaz/Wyprzedaz';
 import Kuchnia from './components/Main/Kuchnia/Kuchnia';
 import Ulubione from './components/Main/Ulubione/Ulubione';
 import Cart from './components/Cart/Cart';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 
 // IMG
 import imgPillow1 from '../src/assets/Mobile/pillow1.jpg';
@@ -243,36 +243,14 @@ function App() {
 		},
 	]);
 
-	// const ref = useRef([]);
-	const ref = useRef([]);
-	ref.current = [];
-
-	function refEl(el) {
-		if (el && !ref.current.includes(el)) {
-			// console.log(el);
-			ref.current.push(el);
-		}
-		// console.log(ref.current);
-	}
-
 	const addAmount = function (e) {
 		e.preventDefault();
-		// ref.current.map((el) => console.log(el));
-		console.log(ref.current);
-		// console.log(e.target);
-
 		let updateItems = [...mapItems];
 		let editItems = updateItems[e.target.getAttribute('name')];
 		let nameItems = updateItems[e.target.getAttribute('name')].id;
 		editItems.amount = editItems.amount + 1;
 		updateItems.splice(nameItems, 1, editItems);
 		setMapItems(updateItems);
-
-		// 	number = ref.current.value;
-		// 	number = parseFloat(number);
-		// 	number += 1;
-		// 	ref.current.value = number;
-		// 	console.log(`${number} = ${typeof number}`);
 	};
 
 	const removeAmount = function (e) {
@@ -285,17 +263,6 @@ function App() {
 		updateItems.splice(nameItems, 1, editItems);
 		setMapItems(updateItems);
 	};
-
-	// function inputValue() {
-	// 	// return ref;
-	// 	// ref.current.value
-	// 	// console.log(ref.current.value);
-
-	// }
-
-	// useEffect(() => {
-	// 	inputValue();
-	// }, []);
 
 	return (
 		<Router>
@@ -332,8 +299,6 @@ function App() {
 							handleState={mapItems}
 							addAmount={addAmount}
 							removeAmount={removeAmount}
-							// refState={ref}
-							refState={refEl}
 						/>
 					</Route>
 					<Route path='/Ulubione'>

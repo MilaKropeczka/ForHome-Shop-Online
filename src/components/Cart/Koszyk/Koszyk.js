@@ -3,13 +3,10 @@ import Item from '../Item/Item';
 import Row from 'react-bootstrap/Row';
 
 function Kuchnia(props) {
-	const handleState = props.handleState;
-	const addAmount = props.addAmount;
-	const removeAmount = props.removeAmount;
 	let totalSum;
 	let sum;
 	let sumArr = [];
-	const mapItems = handleState.map((el) => {
+	const mapItems = props.handleState.map((el) => {
 		if (el.cart === true) {
 			if (!el.newPrice === false) {
 				sum = el.amount * el.newPrice;
@@ -32,10 +29,9 @@ function Kuchnia(props) {
 						<Item
 							{...el}
 							sum={sum}
-							handleState={handleState}
-							addAmount={addAmount}
-							removeAmount={removeAmount}
-							refState={props.refState}
+							handleState={props.handleState}
+							addAmount={props.addAmount}
+							removeAmount={props.removeAmount}
 							el={el}
 						/>
 					</Row>

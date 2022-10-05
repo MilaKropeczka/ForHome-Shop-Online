@@ -5,10 +5,6 @@ import styles from './Cart.module.sass';
 import Koszyk from './Koszyk/Koszyk';
 
 function Cart(props) {
-	const addAmount = props.addAmount;
-	const removeAmount = props.removeAmount;
-	const handleState = props.handleState;
-
 	return (
 		<Container fluid='lg'>
 			<Row>
@@ -17,10 +13,9 @@ function Cart(props) {
 				</Col>
 			</Row>
 			<Koszyk
-				handleState={handleState}
-				addAmount={addAmount}
-				removeAmount={removeAmount}
-				refState={props.refState}
+				handleState={props.handleState}
+				addAmount={props.addAmount}
+				removeAmount={props.removeAmount}
 			/>
 			<hr />
 			<Row>
