@@ -47,7 +47,7 @@ function App() {
 			category: 'Sypialnia',
 			fav: false,
 			amount: 0,
-			cart: true,
+			cart: false,
 		},
 		{
 			id: 1,
@@ -95,7 +95,7 @@ function App() {
 			category: 'Sypialnia',
 			fav: false,
 			amount: 0,
-			cart: true,
+			cart: false,
 		},
 		{
 			id: 4,
