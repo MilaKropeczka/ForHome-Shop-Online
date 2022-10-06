@@ -15,6 +15,7 @@ function Koszyk(props) {
 				sum = el.amount * el.price;
 				sumArr.push(sum);
 			}
+			sum = parseFloat(sum).toFixed(2);
 
 			totalSum = 0;
 			for (let i = 0; i < sumArr.length; i++) {

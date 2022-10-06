@@ -62,8 +62,8 @@ function App() {
 			imgLarge: false,
 			category: 'Sypialnia',
 			fav: false,
-			amount: 0,
-			cart: false,
+			amount: 5,
+			cart: true,
 		},
 		{
 			id: 2,
