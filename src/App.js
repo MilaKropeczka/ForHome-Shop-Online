@@ -158,8 +158,8 @@ function App() {
 			imgLarge: false,
 			category: 'Salon',
 			fav: false,
-			amount: 1,
-			cart: true,
+			amount: 0,
+			cart: false,
 		},
 		{
 			id: 8,
@@ -222,8 +222,8 @@ function App() {
 			imgLarge: false,
 			category: `Kuchnia`,
 			fav: false,
-			amount: 1,
-			cart: true,
+			amount: 0,
+			cart: false,
 		},
 		{
 			id: 12,
