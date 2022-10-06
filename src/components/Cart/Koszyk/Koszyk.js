@@ -10,7 +10,7 @@ function Koszyk(props) {
 		if (el.cart === true) {
 			if (!el.newPrice === false) {
 				sum = el.amount * el.newPrice;
-				sumArr.push(sum);
+				sumArr.pop(sum);
 			} else {
 				sum = el.amount * el.price;
 				sumArr.push(sum);

@@ -222,8 +222,8 @@ function App() {
 			imgLarge: false,
 			category: `Kuchnia`,
 			fav: false,
-			amount: 0,
-			cart: false,
+			amount: 1,
+			cart: true,
 		},
 		{
 			id: 12,
@@ -238,8 +238,8 @@ function App() {
 			imgLarge: false,
 			category: `Kuchnia`,
 			fav: true,
-			amount: 1,
-			cart: true,
+			amount: 0,
+			cart: false,
 		},
 	]);
 

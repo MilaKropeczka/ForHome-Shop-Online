@@ -11,7 +11,7 @@ function Cart(props) {
 
 	useEffect(() => {
 		setAllSum(totalSum);
-	},[]);
+	}, [props]);
 
 	return (
 		<Container fluid='lg'>
