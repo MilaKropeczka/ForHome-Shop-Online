@@ -7,6 +7,7 @@ function Box(props) {
 		let updateItems = [...props.handleState];
 		let editItems = updateItems[props.id];
 		editItems.cart = true;
+		editItems.amount += 1;
 		updateItems.splice(props.id, 1, editItems);
 		props.setHandleState(updateItems);
 	}

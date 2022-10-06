@@ -46,7 +46,7 @@ function App() {
 			imgLarge: false,
 			category: 'Sypialnia',
 			fav: false,
-			amount: 4,
+			amount: 0,
 			cart: true,
 		},
 		{
@@ -62,7 +62,7 @@ function App() {
 			imgLarge: false,
 			category: 'Sypialnia',
 			fav: false,
-			amount: 1,
+			amount: 0,
 			cart: false,
 		},
 		{
@@ -78,7 +78,7 @@ function App() {
 			imgLarge: false,
 			category: 'Sypialnia',
 			fav: false,
-			amount: 1,
+			amount: 0,
 			cart: false,
 		},
 		{
@@ -94,7 +94,7 @@ function App() {
 			imgLarge: false,
 			category: 'Sypialnia',
 			fav: false,
-			amount: 2,
+			amount: 0,
 			cart: true,
 		},
 		{
@@ -110,7 +110,7 @@ function App() {
 			imgLarge: false,
 			category: 'Sypialnia',
 			fav: false,
-			amount: 1,
+			amount: 0,
 			cart: false,
 		},
 		{
@@ -126,7 +126,7 @@ function App() {
 			imgLarge: false,
 			category: 'Salon',
 			fav: false,
-			amount: 2,
+			amount: 0,
 			cart: false,
 		},
 		{
@@ -142,7 +142,7 @@ function App() {
 			imgLarge: false,
 			category: 'Salon',
 			fav: false,
-			amount: 2,
+			amount: 0,
 			cart: false,
 		},
 		{
@@ -158,7 +158,7 @@ function App() {
 			imgLarge: false,
 			category: 'Salon',
 			fav: false,
-			amount: 2,
+			amount: 0,
 			cart: false,
 		},
 		{
@@ -174,7 +174,7 @@ function App() {
 			imgLarge: false,
 			category: 'Salon',
 			fav: false,
-			amount: 2,
+			amount: 0,
 			cart: false,
 		},
 		{
@@ -190,7 +190,7 @@ function App() {
 			imgLarge: false,
 			category: `Kuchnia`,
 			fav: false,
-			amount: 1,
+			amount: 0,
 			cart: false,
 		},
 		{
@@ -206,7 +206,7 @@ function App() {
 			imgLarge: false,
 			category: `Kuchnia`,
 			fav: false,
-			amount: 1,
+			amount: 0,
 			cart: false,
 		},
 		{
@@ -222,7 +222,7 @@ function App() {
 			imgLarge: false,
 			category: `Kuchnia`,
 			fav: false,
-			amount: 1,
+			amount: 0,
 			cart: false,
 		},
 		{
@@ -238,7 +238,7 @@ function App() {
 			imgLarge: false,
 			category: `Kuchnia`,
 			fav: true,
-			amount: 1,
+			amount: 0,
 			cart: false,
 		},
 	]);
