@@ -238,8 +238,8 @@ function App() {
 			imgLarge: false,
 			category: `Kuchnia`,
 			fav: true,
-			amount: 0,
-			cart: false,
+			amount: 1,
+			cart: true,
 		},
 	]);
 
