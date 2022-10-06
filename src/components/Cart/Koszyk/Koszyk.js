@@ -1,9 +1,9 @@
-import React from 'react';
 import Item from '../Item/Item';
 import Row from 'react-bootstrap/Row';
 
-function Kuchnia(props) {
-	let totalSum;
+let totalSum;
+
+function Koszyk(props) {
 	let sum;
 	let sumArr = [];
 	const mapItems = props.handleState.map((el) => {
@@ -43,4 +43,4 @@ function Kuchnia(props) {
 	return mapItems;
 }
 
-export default Kuchnia;
+export { Koszyk, totalSum };
