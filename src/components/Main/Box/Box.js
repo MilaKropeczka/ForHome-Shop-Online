@@ -24,7 +24,9 @@ function Box(props) {
 					</p>
 					<h4>{props.title}</h4>
 					<p className={styles[props.statusFont]}>{props.price} zł</p>
-					<p className={styles.newPrice}>{props.newPrice}</p>
+					<p className={styles.newPrice}>
+						{props.newPrice ? props.newPrice + ` zł` : null}
+					</p>
 				</div>
 				<div className={styles.buy} onClick={addItem}>
 					Dodaj do koszyka

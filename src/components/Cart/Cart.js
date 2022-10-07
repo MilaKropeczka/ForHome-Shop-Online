@@ -13,8 +13,16 @@ function Cart(props) {
 		setAllSum(totalSum);
 	}, [props]);
 
+	// function checkIfZeroCart() {
+	// 	props.handleState.map((el) => {
+	// 		// if (el.cart === true) {
+	// 		// }
+	// 	});
+	// }
+
 	return (
 		<Container fluid='lg'>
+			{/* {checkIfZeroCart()} */}
 			<Row>
 				<Col>
 					<h2 className='text-center m-5'>{props.title}</h2>
