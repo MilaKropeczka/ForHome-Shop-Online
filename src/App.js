@@ -15,6 +15,8 @@ import Kuchnia from './components/Main/Kuchnia/Kuchnia';
 import Ulubione from './components/Main/Ulubione/Ulubione';
 import Cart from './components/Cart/Cart';
 import React, { useState } from 'react';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 // IMG
 import imgPillow1 from '../src/assets/Mobile/pillow1.jpg';
@@ -30,6 +32,16 @@ import imgMug2 from '../src/assets/Mobile/mug2.jpg';
 import imgMug3 from '../src/assets/Mobile/mug3.jpg';
 import imgMug4 from '../src/assets//Mobile/mug4.jpg';
 import imgMug7 from '../src/assets/Mobile/mug7.jpg';
+
+function ScrollToTop() {
+	const { pathname } = useLocation();
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [pathname]);
+
+	return null;
+}
 
 function App() {
 	const [mapItems, setMapItems] = useState([
@@ -222,7 +234,7 @@ function App() {
 			imgLarge: false,
 			category: `Kuchnia`,
 			fav: false,
-			amount: 1,
+			amount: 0,
 			cart: false,
 		},
 		{
@@ -238,8 +250,8 @@ function App() {
 			imgLarge: false,
 			category: `Kuchnia`,
 			fav: true,
-			amount: 1,
-			cart: true,
+			amount: 0,
+			cart: false,
 		},
 	]);
 
@@ -269,6 +281,7 @@ function App() {
 
 	return (
 		<Router>
+			<ScrollToTop />
 			<div className='App'>
 				<Nav handleState={mapItems} />
 				<Switch>
