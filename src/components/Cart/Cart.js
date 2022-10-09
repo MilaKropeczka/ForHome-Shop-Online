@@ -68,8 +68,6 @@ function Cart(props) {
 			/>
 			<hr />
 			{testt()}
-			{/* {emptyCart()} */}
-			{/* {summary()} */}
 		</Container>
 	);
 }

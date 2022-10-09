@@ -11,11 +11,22 @@ function Box(props) {
 		updateItems.splice(props.id, 1, editItems);
 		props.setHandleState(updateItems);
 	}
+
+	function addFavorite() {
+		let updateItems = [...props.handleState];
+		let editItems = updateItems[props.id];
+		editItems.fav = true;
+		updateItems.splice(props.id, 1, editItems);
+		props.setHandleState(updateItems);
+	}
+
 	return (
 		<Col>
 			<div className={`${styles.box}`}>
 				<div className={styles.img}>
-					<i className={`fa-solid fa-heart ${styles.ico}`}></i>
+					<i
+						className={`fa-solid fa-heart ${styles.ico}`}
+						onClick={addFavorite}></i>
 					<img src={props.imgSmall} alt={props.shortContent} />
 				</div>
 				<div className={styles.main}>
