@@ -15,7 +15,6 @@ function Nav(props) {
 	const [isActive, setActive] = useState(false);
 	const menuToggle = () => {
 		setActive(!isActive);
-		console.log(`first`);
 	};
 	return (
 		<>
