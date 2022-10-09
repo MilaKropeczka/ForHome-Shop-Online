@@ -15,6 +15,7 @@ function Nav(props) {
 	const [isActive, setActive] = useState(false);
 	const menuToggle = () => {
 		setActive(!isActive);
+		console.log(`first`);
 	};
 	return (
 		<>
@@ -51,7 +52,7 @@ function Nav(props) {
 						className={`d-lg-none ${styles.menu} ${
 							isActive ? null : styles.close
 						}`}>
-						<PopUpMobile />
+						<PopUpMobile menuToggle={menuToggle} />
 					</Row>
 				</Container>
 			</nav>

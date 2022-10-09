@@ -3,10 +3,10 @@ import styles from './PopUpMobile.module.sass';
 import Item from './Item/Item';
 import Logo from './Logo/Logo';
 
-function PopUpMobile() {
+function PopUpMobile(props) {
 	return (
 		<div className='d-flex justify-content-center align-items-center'>
-			<ul className={styles.lists}>
+			<ul className={styles.lists} onClick={props.menuToggle}>
 				<Logo title='Strona Główna' className='secondaryFont' />
 				<Item title='Sypialnia' className='secondaryFont' />
 				<Item title='Salon' className='secondaryFont' />
