@@ -15,7 +15,11 @@ function Box(props) {
 	function addFavorite() {
 		let updateItems = [...props.handleState];
 		let editItems = updateItems[props.id];
-		editItems.fav = true;
+		if (editItems.fav === true) {
+			editItems.fav = false;
+		} else {
+			editItems.fav = true;
+		}
 		updateItems.splice(props.id, 1, editItems);
 		props.setHandleState(updateItems);
 	}

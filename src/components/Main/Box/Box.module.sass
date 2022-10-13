@@ -72,26 +72,20 @@
 .normal
     font-size: 1.8em !important
 
-.ico
+.ico, .icoTrue
     position: absolute
     right: 0
     padding: 15px 30px
     z-index: 1
     font-size: 2.6em
+    transition: .3s
+
+.ico
     text-shadow: 0 0 6px $light
-.ico:hover
-    text-shadow: 0 0 6px black
-    color: $primary
 
 .icoTrue
-    position: absolute
-    right: 0
-    padding: 15px 30px
-    z-index: 1
-    font-size: 2.6em
     text-shadow: 0 0 6px black
     color: $primary
 
-.icoTrue:hover
-    text-shadow: 0 0 6px $light
-    color: black
+.ico:hover, .icoTrue:hover
+    transform: scale(1.2)
