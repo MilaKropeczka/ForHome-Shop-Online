@@ -25,7 +25,9 @@ function Box(props) {
 			<div className={`${styles.box}`}>
 				<div className={styles.img}>
 					<i
-						className={`fa-solid fa-heart ${styles.ico}`}
+						className={`fa-solid fa-heart ${styles.ico} ${
+							props.fav === true ? styles.icoTrue : styles.ico
+						}`}
 						onClick={addFavorite}></i>
 					<img src={props.imgSmall} alt={props.shortContent} />
 				</div>

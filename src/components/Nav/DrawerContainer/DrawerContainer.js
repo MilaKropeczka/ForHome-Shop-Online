@@ -16,6 +16,7 @@ function DrawerContainer(props) {
 				link='Koszyk'
 				compontent={<Notification handleState={handleState} />}
 			/>
+			<Ico className={`fa-solid fa-user px-3`} link='Profil' />
 		</>
 	);
 }
