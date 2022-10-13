@@ -11,10 +11,6 @@ function Item(props) {
 		setHandle({ value: e.target.value });
 	}
 
-	const removeWithCart = (e) => {
-		console.log(`usuń`);
-	};
-
 	function checkIfZeroCart() {
 		for (const el of props.handleState) {
 			if (el.cart === true) {
@@ -47,7 +43,6 @@ function Item(props) {
 									<input
 										className={`m-lg-2 m-1 m-sm-0 px-4 px-sm-3 px-md-4 py-3 rounded-3 ${styles.backgroundColor}`}
 										value={props.amount}
-										// value={handle}
 										onChange={handleChange}></input>
 									<button
 										className='m-lg-2 m-1 px-4 px-sm-3 px-lg-4 py-3 rounded-3'
@@ -77,7 +72,8 @@ function Item(props) {
 							className={`d-flex justify-content-center align-items-center ${styles.fontSize}`}>
 							<i
 								className={`fa-solid fa-trash-can ${styles.ico}`}
-								onClick={removeWithCart}></i>
+								onClick={props.removeCart}
+								name={props.id}></i>
 						</Col>
 					</>
 				);

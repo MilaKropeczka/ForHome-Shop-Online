@@ -34,6 +34,7 @@ function Koszyk(props) {
 							setHandleState={props.setHandleState}
 							addAmount={props.addAmount}
 							removeAmount={props.removeAmount}
+							removeCart={props.removeCart}
 							el={el}
 						/>
 					</Row>

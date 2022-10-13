@@ -65,6 +65,7 @@ function Cart(props) {
 				handleState={props.handleState}
 				addAmount={props.addAmount}
 				removeAmount={props.removeAmount}
+				removeCart={props.removeCart}
 			/>
 			<hr />
 			{testt()}
