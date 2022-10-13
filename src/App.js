@@ -249,7 +249,7 @@ function App() {
 			imgSmall: `${imgMug7}`,
 			imgLarge: false,
 			category: `Kuchnia`,
-			fav: true,
+			fav: false,
 			amount: 0,
 			cart: false,
 		},
