@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Box.module.sass';
 import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
 
 function Box(props) {
 	let checkNotification = false;
@@ -42,8 +43,18 @@ function Box(props) {
 					Nowy przedmiot został dodany do Twojego koszyka.
 				</div>
 				<div className={styles.button}>
-					<button className={styles.btn1}>Pokaż koszyk</button>
-					<button className={styles.btn2}>Kontynuuj zakupy</button>
+					{/* <button className={styles.btn1}>Pokaż koszyk</button> */}
+					<button className={styles.btn1}>
+						<Link to={`Koszyk`} className={styles.white}>
+							Pokaż koszyk
+						</Link>
+					</button>
+					{/* <Link to={`Koszyk`} className={styles.btn1}>
+						Pokaż koszyk
+					</Link> */}
+					<button className={styles.btn2} onClick={closeNotification}>
+						Kontynuuj zakupy
+					</button>
 				</div>
 			</div>
 		);
