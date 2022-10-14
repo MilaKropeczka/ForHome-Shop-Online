@@ -110,7 +110,7 @@
     @media screen and ( min-width: $lg )
         width: 40%
         height: 125px
-    @media screen and ( min-width: $xxl )
+    @media screen and ( min-width: $xl )
         width: 500px
         height: 125px
         grid-template-columns: 20% 60% 20%
@@ -120,10 +120,11 @@
     // background-color: tomato
     grid-column: 1/4
     grid-row: 1/2
-    font-size: 10em
+    font-size: 9em
+    line-height: 1.65em
     justify-self: center
     color: #53b140
-    @media screen and ( min-width: $xxl )
+    @media screen and ( min-width: $xl )
         font-size: 7em
         line-height: 2em
         padding: 0 0 0 15px
@@ -137,16 +138,21 @@
     text-align: right
     padding: 3px 6px
     font-size: 2.4em
-    @media screen and ( min-width: $xxl )
+    @media screen and ( min-width: $xl )
         font-size: 2em
         grid-column: 3/4
         grid-row: 1/2
 
 .addItem
-    background-color: gold
-    grid-column: 2/4
+    // background-color: gold
+    grid-column: 1/4
     grid-row: 2/3
-    @media screen and ( min-width: $xxl )
+    font-size: 1.5em
+    justify-self: center
+    align-self: center
+    text-align: center
+    @media screen and ( min-width: $xl )
+        text-align: left
         grid-column: 2/4
         grid-row: 2/3
         justify-self: center
@@ -154,24 +160,24 @@
         font-size: 1.5em
 
 .button
-    background-color: brown
+    // background-color: brown
     grid-column: 2/3
     grid-row: 3/4
-    @media screen and ( min-width: $xxl )
+    @media screen and ( min-width: $xl )
         grid-column: 2/3
         grid-row: 3/4
         justify-self: center
         align-self: center
 
 .btn1, .btn2
-    @media screen and ( min-width: $xxl )
+    @media screen and ( min-width: $xl )
         width: 120px
         padding: 6px 12px
         border-radius: 10px
         font-size: 1.15em
 
 .btn1
-    @media screen and ( min-width: $xxl )
+    @media screen and ( min-width: $xl )
         color: white
         background-color: $primary
         margin: 0 15px 20px 0
