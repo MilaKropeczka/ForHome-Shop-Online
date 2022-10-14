@@ -25,31 +25,53 @@ function Box(props) {
 	}
 
 	return (
-		<Col>
-			<div className={`${styles.box}`}>
-				<div className={styles.img}>
-					<i
-						className={`fa-solid fa-heart ${styles.ico} ${
-							props.fav === true ? styles.icoTrue : styles.ico
-						}`}
-						onClick={addFavorite}></i>
-					<img src={props.imgSmall} alt={props.shortContent} />
+		<>
+			<div className={styles.infoBox}>
+				<div className={styles.check}>
+					<i class={`fa-solid fa-circle-check`}></i>
 				</div>
-				<div className={styles.main}>
-					<p className={styles.status + ' ' + styles[props.status]}>
-						{props.status}
-					</p>
-					<h4>{props.title}</h4>
-					<p className={styles[props.statusFont]}>{props.price} zł</p>
-					<p className={styles.newPrice}>
-						{props.newPrice ? props.newPrice + ` zł` : null}
-					</p>
+				<div className={styles.xmark}>
+					<i className={`fa-solid fa-xmark`}></i>
 				</div>
-				<div className={styles.buy} onClick={addItem}>
-					Dodaj do koszyka
+				<div className={styles.addItem}>
+					Nowy przedmiot został dodany do Twojego koszyka.
+				</div>
+				<div className={styles.button}>
+					<button className={styles.btn1}>Pokaż koszyk</button>
+					<button className={styles.btn2}>Kontynuuj zakupy</button>
 				</div>
 			</div>
-		</Col>
+			<Col>
+				<div className={`${styles.box}`}>
+					<div className={styles.img}>
+						<i
+							className={`fa-solid fa-heart ${styles.ico} ${
+								props.fav === true ? styles.icoTrue : styles.ico
+							}`}
+							onClick={addFavorite}></i>
+						<img src={props.imgSmall} alt={props.shortContent} />
+					</div>
+					<div className={styles.main}>
+						<p
+							className={
+								styles.status + ' ' + styles[props.status]
+							}>
+							{props.status}
+						</p>
+						<h4>{props.title}</h4>
+						<p className={styles[props.statusFont]}>
+							{props.price} zł
+						</p>
+						<p className={styles.newPrice}>
+							{props.newPrice ? props.newPrice + ` zł` : null}
+						</p>
+					</div>
+					<div className={styles.buy} onClick={addItem}>
+						Dodaj do koszyka
+					</div>
+				</div>
+			</Col>
+		</>
 	);
 }
 
