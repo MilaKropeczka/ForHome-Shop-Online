@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Box.module.sass';
 import Col from 'react-bootstrap/Col';
 
 function Box(props) {
+	let checkNotification = false;
+	const [notification, setNotification] = useState(checkNotification);
+
 	function addItem() {
 		let updateItems = [...props.handleState];
 		let editItems = updateItems[props.id];
@@ -10,6 +13,8 @@ function Box(props) {
 		editItems.amount += 1;
 		updateItems.splice(props.id, 1, editItems);
 		props.setHandleState(updateItems);
+
+		setNotification(true);
 	}
 
 	function addFavorite() {
@@ -24,13 +29,13 @@ function Box(props) {
 		props.setHandleState(updateItems);
 	}
 
-	return (
-		<>
+	function Notification() {
+		return (
 			<div className={styles.infoBox}>
 				<div className={styles.check}>
-					<i class={`fa-solid fa-circle-check`}></i>
+					<i className={`fa-solid fa-circle-check`}></i>
 				</div>
-				<div className={styles.xmark}>
+				<div className={styles.xmark} onClick={closeNotification}>
 					<i className={`fa-solid fa-xmark`}></i>
 				</div>
 				<div className={styles.addItem}>
@@ -41,6 +46,17 @@ function Box(props) {
 					<button className={styles.btn2}>Kontynuuj zakupy</button>
 				</div>
 			</div>
+		);
+	}
+
+	function closeNotification() {
+		setNotification(false);
+	}
+
+	return (
+		<>
+			{/* {Notification()} */}
+			{notification === true ? Notification() : null}
 			<Col>
 				<div className={`${styles.box}`}>
 					<div className={styles.img}>
@@ -66,6 +82,7 @@ function Box(props) {
 							{props.newPrice ? props.newPrice + ` zł` : null}
 						</p>
 					</div>
+					{/* <div className={styles.buy} onClick={Notification}> */}
 					<div className={styles.buy} onClick={addItem}>
 						Dodaj do koszyka
 					</div>
