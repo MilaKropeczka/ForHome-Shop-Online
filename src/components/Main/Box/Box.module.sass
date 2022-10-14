@@ -101,20 +101,17 @@
     top: calc( 50% + 30px )
     left: 50%
     transform: translate(-50%, -50%)
-    width: 80%
-    height: 50%
+    width: 90%
+    height: 300px
     border-radius: 20px
     display: grid
     grid-template-columns: 20% 60% 20%
     grid-template-rows: 40% 30% 30%
     @media screen and ( min-width: $lg )
-        width: 40%
-        height: 125px
-    @media screen and ( min-width: $xl )
-        width: 500px
-        height: 125px
         grid-template-columns: 20% 60% 20%
         grid-template-rows: 20% 50% 30%
+        width: 500px
+        height: 125px
 
 .check
     // background-color: tomato
@@ -124,7 +121,7 @@
     line-height: 1.65em
     justify-self: center
     color: #53b140
-    @media screen and ( min-width: $xl )
+    @media screen and ( min-width: $lg )
         font-size: 7em
         line-height: 2em
         padding: 0 0 0 15px
@@ -138,7 +135,8 @@
     text-align: right
     padding: 3px 6px
     font-size: 2.4em
-    @media screen and ( min-width: $xl )
+    cursor: pointer
+    @media screen and ( min-width: $lg )
         font-size: 2em
         grid-column: 3/4
         grid-row: 1/2
@@ -151,7 +149,9 @@
     justify-self: center
     align-self: center
     text-align: center
-    @media screen and ( min-width: $xl )
+    padding: 0 20px
+    @media screen and ( min-width: $lg )
+        padding: 0
         text-align: left
         grid-column: 2/4
         grid-row: 2/3
@@ -160,26 +160,27 @@
         font-size: 1.5em
 
 .button
-    // background-color: brown
     grid-column: 1/4
     grid-row: 3/4
     justify-self: center
     align-self: center
-    @media screen and ( min-width: $xl )
+    @media screen and ( min-width: $lg )
         grid-column: 2/3
         grid-row: 3/4
 
-.btn1, .btn2
-    width: 108px
-    padding: 6px 12px
-    border-radius: 10px
-    font-size: 1em
-    @media screen and ( min-width: $xl )
-        width: 120px
-        font-size: 1.15em
-
 .btn1
+    width: 105px
     color: white
     background-color: $primary
-    margin: 0 15px 20px 0
-    // @media screen and ( min-width: $xl )
+    margin: 0 10px 20px 0
+.btn2
+    width: 125px
+    color: black
+
+.btn1, .btn2
+    padding: 6px 12px
+    border-radius: 10px
+    font-size: 1.1em
+    @media screen and ( min-width: $lg )
+        width: 120px
+        font-size: 1.15em
