@@ -32,31 +32,36 @@ function Box(props) {
 
 	function Notification() {
 		return (
-			<div className={styles.infoBox}>
-				<div className={styles.check}>
-					<i className={`fa-solid fa-circle-check`}></i>
-				</div>
-				<div className={styles.xmark} onClick={closeNotification}>
-					<i className={`fa-solid fa-xmark`}></i>
-				</div>
-				<div className={styles.addItem}>
-					Nowy przedmiot został dodany do Twojego koszyka.
-				</div>
-				<div className={styles.button}>
-					{/* <button className={styles.btn1}>Pokaż koszyk</button> */}
-					<button className={styles.btn1}>
-						<Link to={`Koszyk`} className={styles.white}>
-							Pokaż koszyk
-						</Link>
-					</button>
-					{/* <Link to={`Koszyk`} className={styles.btn1}>
+			<>
+				<div className={styles.shadow}></div>
+				<div className={styles.infoBox}>
+					<div className={styles.check}>
+						<i className={`fa-solid fa-circle-check`}></i>
+					</div>
+					<div className={styles.xmark} onClick={closeNotification}>
+						<i className={`fa-solid fa-xmark`}></i>
+					</div>
+					<div className={styles.addItem}>
+						Nowy przedmiot został dodany do Twojego koszyka.
+					</div>
+					<div className={styles.button}>
+						{/* <button className={styles.btn1}>Pokaż koszyk</button> */}
+						<button className={styles.btn1}>
+							<Link to={`Koszyk`} className={styles.white}>
+								Pokaż koszyk
+							</Link>
+						</button>
+						{/* <Link to={`Koszyk`} className={styles.btn1}>
 						Pokaż koszyk
 					</Link> */}
-					<button className={styles.btn2} onClick={closeNotification}>
-						Kontynuuj zakupy
-					</button>
+						<button
+							className={styles.btn2}
+							onClick={closeNotification}>
+							Kontynuuj zakupy
+						</button>
+					</div>
 				</div>
-			</div>
+			</>
 		);
 	}
 

@@ -113,8 +113,17 @@
         width: 500px
         height: 125px
 
+.shadow
+    position: fixed
+    left: 0
+    top: 0
+    background-color: $grey
+    width: 100vw
+    height: 100vh
+    z-index: 99
+    opacity: 70%
+
 .check
-    // background-color: tomato
     grid-column: 1/4
     grid-row: 1/2
     font-size: 9em
@@ -171,16 +180,6 @@
         grid-column: 2/3
         grid-row: 3/4
 
-.btn1
-    width: 105px
-    color: white
-    background-color: $primary
-    margin: 0 10px 20px 0
-    border: 1px solid $primary
-    transition: color .2s, transform .2s
-.btn1:hover
-    transform: scale(1.03)
-
 .white
     color: white
     padding: 8px 12px
@@ -195,10 +194,21 @@
     transform: scale(1.03)
     color: #545454
 
+.btn1
+    width: 105px
+    color: white
+    background-color: $primary
+    margin: 0 10px 20px 0
+    border: 1px solid $primary
+    transition: color .2s, transform .2s
+.btn1:hover
+    transform: scale(1.03)
+
 .btn1, .btn2
-    padding: 6px 12px
+    padding: 6px 5px
     border-radius: 10px
     font-size: 1.1em
     @media screen and ( min-width: $lg )
+        padding: 6px 12px
         width: 120px
         font-size: 1.15em
