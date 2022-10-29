@@ -28,7 +28,7 @@ function Nav(props) {
 							<Logo />
 						</Col>
 						<Col
-							lg={8}
+							lg={6}
 							className={
 								'd-none d-lg-block text-center ' +
 								styles.pointer
@@ -43,7 +43,11 @@ function Nav(props) {
 								menuToggle={menuToggle}
 							/>
 						</Col>
-						<Col className={`text-center ${styles.pointer}`}>
+						<Col
+							className={`text-center ${styles.pointer}`}
+							xs={7}
+							sm
+							lg={3}>
 							<DrawerContainer handleState={handleState} />
 						</Col>
 					</Row>
