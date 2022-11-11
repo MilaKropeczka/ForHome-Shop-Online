@@ -44,6 +44,7 @@ function ScrollToTop() {
 }
 
 function App() {
+	const [isLogged, setLogged] = useState(true);
 	const [mapItems, setMapItems] = useState([
 		{
 			id: 0,
@@ -294,7 +295,7 @@ function App() {
 		<Router>
 			<ScrollToTop />
 			<div className='App'>
-				<Nav handleState={mapItems} />
+				<Nav handleState={mapItems} isLogged={isLogged} />
 				<Switch>
 					<Route path='/Sypialnia'>
 						<Main
@@ -372,6 +373,7 @@ function App() {
 							}
 						/>
 					</Route>
+					<Route path='/Profil'></Route>
 					<Route exact path='/'>
 						<Header />
 						<Main

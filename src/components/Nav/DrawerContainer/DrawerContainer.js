@@ -1,6 +1,8 @@
 import React from 'react';
 import Ico from './Ico/Ico';
 import Notification from './Ico/Notification/Notification';
+// import IsLogged from '../IsLogged/IsLogged';
+import IsLogged from './IsLogged/IsLogged';
 
 function DrawerContainer(props) {
 	const handleState = props.handleState;
@@ -14,9 +16,13 @@ function DrawerContainer(props) {
 			<Ico
 				className={`fa-solid fa-cart-shopping px-3`}
 				link='Koszyk'
-				compontent={<Notification handleState={handleState} />}
+				component={<Notification handleState={handleState} />}
 			/>
-			<Ico className={`fa-solid fa-user px-3`} link='Profil' />
+			<Ico
+				className={`fa-solid fa-user px-3`}
+				link={props.isLogged ? null : `Profil`}
+				component={<IsLogged />}
+			/>
 		</>
 	);
 }

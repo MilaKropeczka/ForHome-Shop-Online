@@ -48,7 +48,10 @@ function Nav(props) {
 							xs={7}
 							sm
 							lg={3}>
-							<DrawerContainer handleState={handleState} />
+							<DrawerContainer
+								handleState={handleState}
+								isLogged={props.isLogged}
+							/>
 						</Col>
 					</Row>
 					<Row
