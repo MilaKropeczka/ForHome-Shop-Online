@@ -1,7 +1,8 @@
 import React from 'react';
-import styles from './IsLogged.module.sass';
+import styles from './IsNotLogged.module.sass';
+import { Link } from 'react-router-dom';
 
-function IsLogged() {
+function IsNotLogged() {
 	return (
 		<div className={styles.box}>
 			<h4 className={styles.fontTitle}>Witaj w ForHome!</h4>
@@ -9,16 +10,19 @@ function IsLogged() {
 				Zaloguj się i zobacz swoje zakupy, obserwowane oferty i
 				powiadomienia!
 			</p>
-			<button
+			<Link
+				to={`Logowanie`}
 				className={`${styles.button} ${styles.primary} ${styles.font} mt-lg-0 mx-lg-2 my-4`}>
 				zaloguj się
-			</button>
-			<button
+			</Link>
+			<br />
+			<Link
+				to={`Rejestracja`}
 				className={`${styles.button} ${styles.secondary} ${styles.font} mt-lg-0 mx-lg-2 my-4`}>
 				dołącz do nas!
-			</button>
+			</Link>
 		</div>
 	);
 }
 
-export default IsLogged;
+export default IsNotLogged;

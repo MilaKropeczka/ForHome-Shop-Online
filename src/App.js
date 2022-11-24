@@ -44,7 +44,7 @@ function ScrollToTop() {
 }
 
 function App() {
-	const [isLogged, setLogged] = useState(true);
+	const [isLogged, setLogged] = useState(false);
 	const [mapItems, setMapItems] = useState([
 		{
 			id: 0,
@@ -374,6 +374,8 @@ function App() {
 						/>
 					</Route>
 					<Route path='/Profil'></Route>
+					<Route path='/Logowanie'>Logowanie</Route>
+					<Route path='/Rejestracja'>Rejestracja</Route>
 					<Route exact path='/'>
 						<Header />
 						<Main
