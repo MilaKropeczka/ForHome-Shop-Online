@@ -1,11 +1,11 @@
 import React from 'react';
 import Ico from './Ico/Ico';
 import Notification from './Ico/Notification/Notification';
-// import IsLogged from '../IsLogged/IsLogged';
-import IsLogged from './IsLogged/IsLogged';
+import IsNotLogged from './IsNotLogged/IsNotLogged';
 
 function DrawerContainer(props) {
 	const handleState = props.handleState;
+
 	return (
 		<>
 			<Ico
@@ -20,8 +20,8 @@ function DrawerContainer(props) {
 			/>
 			<Ico
 				className={`fa-solid fa-user px-3`}
-				link={props.isLogged ? null : `Profil`}
-				component={<IsLogged />}
+				link={props.isLogged ? `profil` : `#`}
+				popup={props.isLogged ? null : <IsNotLogged />}
 			/>
 		</>
 	);

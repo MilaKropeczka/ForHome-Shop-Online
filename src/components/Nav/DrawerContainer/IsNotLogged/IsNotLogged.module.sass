@@ -1,48 +1,41 @@
 @import ../../../colors
+
 .box
     position: absolute
-    top: 39px
-    left: -15vw
+    top: 60px
+    right: 10vw
     min-width: 180px
     max-width: 220px
     min-height: 180px
     max-height: 200px
     padding: 30px 20px
-    transform: translateX(50%)
     background-color: $light
     box-shadow: 0px 3px 3px $grey
-    ~ *
-        margin: 10px
 
 .button
     font-size: 1.3rem
     padding: 10px 20px
+    line-height: 32px
     border-radius: 10px
     letter-spacing: 1px
-
-.primary
-    background-color: $primary
-    color: $light
-    transform: translateY(4px)
-    transition: transform .2s
-.primary:hover
-    color: black
-    transform: translateY(4px) rotate(1deg)
 
 .font
     font-weight: 400
     font-family: 'Montserrat', sans-serif
     text-transform: uppercase
 
+.primary
+    background-color: $primary
+    color: $light
+.primary:hover
+    color: black
+
 .secondary
     font-size: .9rem
     background-color: transparent
     color: $primary
-    transform: translateY(-6px)
-    transition: color .2s
 .secondary:hover
     color: black
-
 
 .fontText, .fontTitle
     font-family: 'Montserrat', sans-serif
