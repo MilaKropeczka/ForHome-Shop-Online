@@ -2,7 +2,8 @@ import React from 'react';
 import styles from './IsNotLogged.module.sass';
 import { Link } from 'react-router-dom';
 
-function IsNotLogged() {
+function IsNotLogged(props) {
+	let setClick = props.setClick;
 	return (
 		<div className={styles.box}>
 			<h4 className={styles.fontTitle}>Witaj w ForHome!</h4>
@@ -12,13 +13,15 @@ function IsNotLogged() {
 			</p>
 			<Link
 				to={`Logowanie`}
-				className={`${styles.button} ${styles.primary} ${styles.font} mt-lg-0 mx-lg-2 my-4`}>
+				className={`${styles.button} ${styles.primary} ${styles.font} mt-lg-0 mx-lg-2 my-4`}
+				onClick={() => setClick(false)}>
 				zaloguj się
 			</Link>
 			<br />
 			<Link
 				to={`Rejestracja`}
-				className={`${styles.button} ${styles.secondary} ${styles.font} mt-lg-0 mx-lg-2 my-4`}>
+				className={`${styles.button} ${styles.secondary} ${styles.font} mt-lg-0 mx-lg-2 my-4`}
+				onClick={() => setClick(false)}>
 				dołącz do nas!
 			</Link>
 		</div>

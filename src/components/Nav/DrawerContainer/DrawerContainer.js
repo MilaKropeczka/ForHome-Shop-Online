@@ -2,9 +2,11 @@ import React from 'react';
 import Ico from './Ico/Ico';
 import Notification from './Ico/Notification/Notification';
 import IsNotLogged from './IsNotLogged/IsNotLogged';
+import { useState } from 'react';
 
 function DrawerContainer(props) {
 	const handleState = props.handleState;
+	const [isClick, setClick] = useState(false);
 
 	return (
 		<>
@@ -21,7 +23,13 @@ function DrawerContainer(props) {
 			<Ico
 				className={`fa-solid fa-user px-3`}
 				link={props.isLogged ? `profil` : `#`}
-				popup={props.isLogged ? null : <IsNotLogged />}
+				popup={
+					props.isLogged ? null : (
+						<IsNotLogged isClick={isClick} setClick={setClick} />
+					)
+				}
+				isClick={isClick}
+				setClick={setClick}
 			/>
 		</>
 	);

@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './Ico.module.sass';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 
 function Ico(props) {
-	const [isClick, setClick] = useState(false);
+	const setClick = props.setClick;
+	const isClick = props.isClick;
 
 	return (
 		<>
