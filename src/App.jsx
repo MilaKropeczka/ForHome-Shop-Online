@@ -17,6 +17,8 @@ import Cart from './components/Cart/Cart';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import Logowanie from './components/Logowanie/Logowanie';
+import Rejestracja from './components/Rejestracja/Rejestracja';
 
 // IMG
 import imgPillow1 from '../src/assets/Mobile/pillow1.jpg';
@@ -374,8 +376,13 @@ function App() {
 						/>
 					</Route>
 					<Route path='/Profil'></Route>
-					<Route path='/Logowanie'>Logowanie</Route>
-					<Route path='/Rejestracja'>Rejestracja</Route>
+					<Route path='/Logowanie'>
+						<Logowanie />
+					</Route>
+					<Route path='/Rejestracja'>
+						<Rejestracja />
+					</Route>
+
 					<Route exact path='/'>
 						<Header />
 						<Main
