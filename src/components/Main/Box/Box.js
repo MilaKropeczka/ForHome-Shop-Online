@@ -69,10 +69,8 @@ function Box(props) {
 		setNotification(false);
 	}
 
-	let z;
-
 	function viewProduct() {
-		z = '/oferty/' + props.title + '-' + props.id;
+		let z = '/oferty/' + props.title + '=' + props.id;
 		z = z
 			.replaceAll(` `, `-`)
 			.toLowerCase()

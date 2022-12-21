@@ -293,6 +293,25 @@ function App() {
 		setMapItems(updateItems);
 	}
 
+	function idCheckHref() {
+		let href = window.location.href;
+		let id = href.indexOf('=') + 1;
+		let link = href.slice(id);
+		let el = mapItems[link];
+		console.log(el);
+		return (
+			<>
+				<div> title {el.title}</div>
+				<div> content {el.content}</div>
+				<div> imgLarge {el.imgLarge}</div>
+				<div> price {el.price}</div>
+				<div> newPrice {el.newPrice}</div>
+				<div> status {el.status}</div>
+				<div> statusFont {el.statusFont}</div>
+			</>
+		);
+	}
+
 	return (
 		<>
 			<Router>
@@ -398,7 +417,7 @@ function App() {
 								/>
 							</Route>
 							<Route path='/oferty/'>
-								<h1>af</h1>
+								<h1>{idCheckHref()}</h1>
 							</Route>
 						</Switch>
 						<SendSection />
