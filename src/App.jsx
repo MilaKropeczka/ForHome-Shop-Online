@@ -294,114 +294,121 @@ function App() {
 	}
 
 	return (
-		<Router>
-			<ScrollToTop />
-			<div className='App'>
-				<Nav handleState={mapItems} isLogged={isLogged} />
-				<Switch>
-					<Route path='/Sypialnia'>
-						<Main
-							title='Sypialnia'
-							component={
-								<Sypialnia
+		<>
+			<Router>
+				<ScrollToTop />
+				<Route>
+					<div className='App'>
+						<Nav handleState={mapItems} isLogged={isLogged} />
+						<Switch>
+							<Route path='/sypialnia'>
+								<Main
+									title='Sypialnia'
+									component={
+										<Sypialnia
+											handleState={mapItems}
+											setHandleState={setMapItems}
+										/>
+									}
+								/>
+							</Route>
+							<Route path='/salon'>
+								<Main
+									title='Salon'
+									component={
+										<Salon
+											handleState={mapItems}
+											setHandleState={setMapItems}
+										/>
+									}
+								/>
+							</Route>
+							<Route path='/kuchnia'>
+								<Main
+									title='Kuchnia'
+									component={
+										<Kuchnia
+											handleState={mapItems}
+											setHandleState={setMapItems}
+										/>
+									}
+								/>
+							</Route>
+							<Route path='/wyprzedaż'>
+								<Main
+									title='Wyprzedaż'
+									component={
+										<Wyprzedaz
+											handleState={mapItems}
+											setHandleState={setMapItems}
+										/>
+									}
+								/>
+							</Route>
+							<Route path='/koszyk'>
+								<Cart
+									title='Koszyk'
 									handleState={mapItems}
 									setHandleState={setMapItems}
+									addAmount={addAmount}
+									removeAmount={removeAmount}
+									removeCart={removeCart}
 								/>
-							}
-						/>
-					</Route>
-					<Route path='/Salon'>
-						<Main
-							title='Salon'
-							component={
-								<Salon
-									handleState={mapItems}
-									setHandleState={setMapItems}
+							</Route>
+							<Route path='/ulubione'>
+								<Main
+									title='Ulubione'
+									component={
+										<Ulubione
+											handleState={mapItems}
+											setHandleState={setMapItems}
+										/>
+									}
 								/>
-							}
-						/>
-					</Route>
-					<Route path='/Kuchnia'>
-						<Main
-							title='Kuchnia'
-							component={
-								<Kuchnia
-									handleState={mapItems}
-									setHandleState={setMapItems}
+							</Route>
+							<Route path='/wyszukiwarka'>
+								<Main
+									title='Wyszukaj frazy ...""'
+									component={
+										<Wyszukiwarka
+											handleState={mapItems}
+											setHandleState={setMapItems}
+										/>
+									}
 								/>
-							}
-						/>
-					</Route>
-					<Route path='/Wyprzedaż'>
-						<Main
-							title='Wyprzedaż'
-							component={
-								<Wyprzedaz
-									handleState={mapItems}
-									setHandleState={setMapItems}
-								/>
-							}
-						/>
-					</Route>
-					<Route path='/Koszyk'>
-						<Cart
-							title='Koszyk'
-							handleState={mapItems}
-							setHandleState={setMapItems}
-							addAmount={addAmount}
-							removeAmount={removeAmount}
-							removeCart={removeCart}
-						/>
-					</Route>
-					<Route path='/Ulubione'>
-						<Main
-							title='Ulubione'
-							component={
-								<Ulubione
-									handleState={mapItems}
-									setHandleState={setMapItems}
-								/>
-							}
-						/>
-					</Route>
-					<Route path='/Wyszukiwarka'>
-						<Main
-							title='Wyszukaj frazy ...""'
-							component={
-								<Wyszukiwarka
-									handleState={mapItems}
-									setHandleState={setMapItems}
-								/>
-							}
-						/>
-					</Route>
-					<Route path='/Profil'></Route>
-					<Route path='/Logowanie'>
-						<Logowanie />
-					</Route>
-					<Route path='/Rejestracja'>
-						<Rejestracja />
-					</Route>
+							</Route>
+							<Route path='/profil'></Route>
+							<Route path='/logowanie'>
+								<Logowanie />
+							</Route>
+							<Route path='/rejestracja'>
+								<Rejestracja />
+							</Route>
 
-					<Route exact path='/'>
-						<Header />
-						<Main
-							title='Bestsellery'
-							component={
-								<Bestseller
-									handleState={mapItems}
-									setHandleState={setMapItems}
+							<Route exact path='/'>
+								<Header />
+								<Main
+									title='Bestsellery'
+									component={
+										<Bestseller
+											handleState={mapItems}
+											setHandleState={setMapItems}
+										/>
+									}
 								/>
-							}
-						/>
-					</Route>
-				</Switch>
-				<SendSection />
-				<Faq />
-				<About />
-				<Footer />
-			</div>
-		</Router>
+							</Route>
+							<Route path='/oferty/'>
+								<h1>af</h1>
+							</Route>
+						</Switch>
+						<SendSection />
+						<Faq />
+						<About />
+						<Footer />
+					</div>
+				</Route>
+			</Router>
+		</>
 	);
 }
 

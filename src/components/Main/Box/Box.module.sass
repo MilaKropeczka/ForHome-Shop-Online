@@ -1,5 +1,6 @@
 @import "../../colors"
 .box
+    display: block
     overflow: hidden
     width: 280px
     height: 400px
@@ -8,10 +9,12 @@
     margin: 20px auto
     cursor: pointer
     transition: .2s
+    color: initial
     @media screen and ( min-width: $lg )
         margin: 20px auto
 .box:hover
     transform: scale(1.01) rotate(1deg)
+    color: initial
 
 .img
     overflow: hidden
@@ -199,7 +202,7 @@
     color: white
     background-color: $primary
     margin: 0 10px 20px 0
-    border: 1px solid $primary
+    // border: 1px solid $primary
     transition: color .2s, transform .2s
 .btn1:hover
     transform: scale(1.03)
