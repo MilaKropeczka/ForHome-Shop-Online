@@ -91,8 +91,8 @@ function Box(props) {
 			{/* {Notification()} */}
 			{notification === true ? Notification() : null}
 			<Col>
-				{/* <div className={`${styles.box}`} onClick={viewProduct}> */}
-				<Link to={viewProduct} className={`${styles.box}`}>
+				<div className={`${styles.box}`}>
+					{/* <Link to={viewProduct} className={`${styles.box}`}> */}
 					<div className={styles.img}>
 						<i
 							className={`fa-solid fa-heart ${styles.ico} ${
@@ -101,7 +101,8 @@ function Box(props) {
 							onClick={addFavorite}></i>
 						<img src={props.imgSmall} alt={props.shortContent} />
 					</div>
-					<div className={styles.main}>
+					{/* <div className={styles.main}> */}
+					<Link to={viewProduct} className={styles.main}>
 						<p
 							className={
 								styles.status + ' ' + styles[props.status]
@@ -115,13 +116,13 @@ function Box(props) {
 						<p className={styles.newPrice}>
 							{props.newPrice ? props.newPrice + ` zł` : null}
 						</p>
-					</div>
+					</Link>
 					{/* <div className={styles.buy} onClick={Notification}> */}
 					<div className={styles.buy} onClick={addItem}>
 						Dodaj do koszyka
 					</div>
-					{/* </div> */}
-				</Link>
+				</div>
+				{/* </Link> */}
 			</Col>
 		</>
 	);
