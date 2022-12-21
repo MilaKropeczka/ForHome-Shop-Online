@@ -69,12 +69,41 @@ function Box(props) {
 		setNotification(false);
 	}
 
+	let z;
+
+	function viewProduct() {
+		z = '/oferty/' + props.title + '-' + props.id;
+		z = z
+			.replaceAll(` `, `-`)
+			.toLowerCase()
+			.replaceAll(`ą`, `a`)
+			.replaceAll(`ć`, `c`)
+			.replaceAll(`ę`, `e`)
+			.replaceAll(`ł`, `l`)
+			.replaceAll(`ń`, `n`)
+			.replaceAll(`ó`, `o`)
+			.replaceAll(`ś`, `s`)
+			.replaceAll(`ź`, `z`)
+			.replaceAll(`ż`, `z`);
+		return z;
+	}
+
+	function changePathName() {
+		// window.location.pathname = `${z}`;
+		// window.location.pathname = `/oferty`;
+		console.log(window.location.pathname);
+	}
+
 	return (
 		<>
 			{/* {Notification()} */}
 			{notification === true ? Notification() : null}
 			<Col>
-				<div className={`${styles.box}`}>
+				{/* <div className={`${styles.box}`} onClick={viewProduct}> */}
+				<Link
+					to={viewProduct}
+					className={`${styles.box}`}
+					onClick={changePathName}>
 					<div className={styles.img}>
 						<i
 							className={`fa-solid fa-heart ${styles.ico} ${
@@ -102,7 +131,8 @@ function Box(props) {
 					<div className={styles.buy} onClick={addItem}>
 						Dodaj do koszyka
 					</div>
-				</div>
+					{/* </div> */}
+				</Link>
 			</Col>
 		</>
 	);
