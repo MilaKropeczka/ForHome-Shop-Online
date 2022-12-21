@@ -88,22 +88,13 @@ function Box(props) {
 		return z;
 	}
 
-	function changePathName() {
-		// window.location.pathname = `${z}`;
-		// window.location.pathname = `/oferty`;
-		console.log(window.location.pathname);
-	}
-
 	return (
 		<>
 			{/* {Notification()} */}
 			{notification === true ? Notification() : null}
 			<Col>
 				{/* <div className={`${styles.box}`} onClick={viewProduct}> */}
-				<Link
-					to={viewProduct}
-					className={`${styles.box}`}
-					onClick={changePathName}>
+				<Link to={viewProduct} className={`${styles.box}`}>
 					<div className={styles.img}>
 						<i
 							className={`fa-solid fa-heart ${styles.ico} ${
