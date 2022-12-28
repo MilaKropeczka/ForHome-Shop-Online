@@ -99,7 +99,14 @@ function Box(props) {
 								props.fav === true ? styles.icoTrue : styles.ico
 							}`}
 							onClick={addFavorite}></i>
-						<img src={props.imgSmall} alt={props.shortContent} />
+						{/* <img src={props.imgSmall} alt={props.shortContent} /> */}
+
+						<Link to={viewProduct}>
+							<img
+								src={props.imgSmall}
+								alt={props.shortContent}
+							/>
+						</Link>
 					</div>
 					{/* <div className={styles.main}> */}
 					<Link to={viewProduct} className={styles.main}>
