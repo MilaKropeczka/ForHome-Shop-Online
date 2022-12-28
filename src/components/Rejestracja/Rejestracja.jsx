@@ -5,14 +5,22 @@ function Rejestracja() {
 	return (
 		<>
 			<div className={styles.wrapper}>
-				<div className={styles.box}>
+				<form className={styles.box}>
 					<div className={styles.heading}>Zarejestruj się</div>
 					<div className={styles.main}>
-						<input placeholder='Login' />
+						<input placeholder='Login' autoComplete='name' />
 						<br />
-						<input type='email' placeholder='E-mail' />
+						<input
+							type='email'
+							placeholder='E-mail'
+							autoComplete='email'
+						/>
 						<br />
-						<input type='password' placeholder='Hasło' />
+						<input
+							type='password'
+							placeholder='Hasło'
+							autoComplete='new-password'
+						/>
 						<br />
 						<input type='checkbox' />
 						<label>
@@ -26,7 +34,7 @@ function Rejestracja() {
 							zarejestruj się
 						</button>
 					</div>
-				</div>
+				</form>
 			</div>
 		</>
 	);

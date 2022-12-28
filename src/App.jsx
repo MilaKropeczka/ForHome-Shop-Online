@@ -403,6 +403,9 @@ function App() {
 							<Route path='/rejestracja'>
 								<Rejestracja />
 							</Route>
+							<Route path='/oferty'>
+								<IdCheckHref />
+							</Route>
 
 							<Route exact path='/'>
 								<Header />
@@ -415,9 +418,6 @@ function App() {
 										/>
 									}
 								/>
-							</Route>
-							<Route path='/oferty/'>
-								<IdCheckHref />
 							</Route>
 						</Switch>
 						<SendSection />

@@ -5,12 +5,16 @@ function Logowanie() {
 	return (
 		<>
 			<div className={styles.wrapper}>
-				<div className={styles.box}>
+				<form className={styles.box}>
 					<div className={styles.heading}>Zaloguj się</div>
 					<div className={styles.main}>
-						<input placeholder='Login' />
+						<input placeholder='Login' autoComplete='username' />
 						<br />
-						<input type='password' placeholder='Hasło' />
+						<input
+							type='password'
+							placeholder='Hasło'
+							autoComplete='current-password'
+						/>
 					</div>
 					<div className={styles.footer}>
 						<button
@@ -18,7 +22,7 @@ function Logowanie() {
 							Zaloguj się
 						</button>
 					</div>
-				</div>
+				</form>
 			</div>
 		</>
 	);
