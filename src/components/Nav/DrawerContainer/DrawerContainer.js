@@ -12,17 +12,17 @@ function DrawerContainer(props) {
 		<>
 			<Ico
 				className={`fa-solid fa-magnifying-glass px-3`}
-				link='Wyszukiwarka'
+				link='/wyszukiwarka'
 			/>
-			<Ico className={`fa-solid fa-heart px-3`} link='Ulubione' />
+			<Ico className={`fa-solid fa-heart px-3`} link='/ulubione' />
 			<Ico
 				className={`fa-solid fa-cart-shopping px-3`}
-				link='Koszyk'
+				link='/koszyk'
 				component={<Notification handleState={handleState} />}
 			/>
 			<Ico
 				className={`fa-solid fa-user px-3`}
-				link={props.isLogged ? `profil` : `#`}
+				link={props.isLogged ? `/profil` : `#`}
 				popup={
 					props.isLogged ? null : (
 						<IsNotLogged isClick={isClick} setClick={setClick} />

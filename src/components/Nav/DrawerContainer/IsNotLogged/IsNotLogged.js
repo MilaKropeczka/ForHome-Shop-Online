@@ -12,14 +12,14 @@ function IsNotLogged(props) {
 				powiadomienia!
 			</p>
 			<Link
-				to={`Logowanie`}
+				to={`/logowanie`}
 				className={`${styles.button} ${styles.primary} ${styles.font} mt-lg-0 mx-lg-2 my-4`}
 				onClick={() => setClick(false)}>
 				zaloguj się
 			</Link>
 			<br />
 			<Link
-				to={`Rejestracja`}
+				to={`/rejestracja`}
 				className={`${styles.button} ${styles.secondary} ${styles.font} mt-lg-0 mx-lg-2 my-4`}
 				onClick={() => setClick(false)}>
 				dołącz do nas!
