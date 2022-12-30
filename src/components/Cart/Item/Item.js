@@ -35,6 +35,7 @@ function Item(props) {
 								id={props.id}
 								removeAmount={props.removeAmount}
 								addAmount={props.addAmount}
+								amount={props.amount}
 							/>
 						</Col>
 						<Col
