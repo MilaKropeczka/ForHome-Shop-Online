@@ -218,7 +218,7 @@ function App() {
 			statusFont: 'through',
 			title: `Beżowy kubek serce`,
 			shortContent: `Beżowy kubek serce`,
-			content: false,
+			content: `Ceramiczny kubek ze złotymi elementami. Poręczne ucho gwarantuje stabilny uchwyt podczas picia gorącego napoju. Proste kształty, stonowane kolory i matowa emalia nadają stołowi rustykalny charakter.`,
 			price: 24.99,
 			newPrice: 21.99,
 			imgSmall: `${imgMug3}`,
@@ -308,25 +308,37 @@ function App() {
 				<Container>
 					<Row>
 						<Col xs={12} md={6} className={styles.leftBox}>
-							<Row>
+							<div className='d-md-none'>
 								<h1 className={styles.title}>{el.title}</h1>
-							</Row>
-							<Row>
+							</div>
+							<div>
 								<div
 									className={styles.imgLarge}
 									style={{
 										backgroundImage: `url('${el.imgLarge}')`,
 									}}></div>
-							</Row>
+							</div>
 						</Col>
 						<Col xs={12} md={6} className={styles.rightBox}>
-							<Row>
-								Cena {el.price} {el.newPrice} {el.statusFont}
-							</Row>
-							<Row>Opis {el.content}</Row>
-							<Row>Liczba sztuk</Row>
-							<Row>Dodaj do koszyka</Row>
-							<Row>Kup teraz</Row>
+							<div className='d-none d-md-block'>
+								<h1 className={styles.title}>{el.title}</h1>
+							</div>
+							<div className={styles.price}>
+								{el.newPrice === false ? (
+									<h3 className='text-center'>{el.price} zł</h3>
+								) : (
+									<h3 className='text-center'>
+										<del className={styles.oldPrice}>
+											{el.price} zł
+										</del>
+										{el.newPrice} zł
+									</h3>
+								)}
+							</div>
+							<div className={styles.content}>{el.content}</div>
+							<div>Liczba sztuk</div>
+							<div>Dodaj do koszyka</div>
+							<div>Kup teraz</div>
 						</Col>
 					</Row>
 				</Container>

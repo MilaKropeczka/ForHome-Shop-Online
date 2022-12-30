@@ -1,23 +1,44 @@
+@import ./components/colors
 .leftBox
     // background-color: tomato
     overflow: hidden
 
-.rightBox
-    // background-color: aqua
 
 .rightBox, .leftBox
-    height: 470px
     font-size: 1.6rem
     padding: 10px 20px
+    // height: 260px
+    @media screen and ( min-width: $md )
+        height: 470px
+
+.rightBox
+    // background-color: aqua
+    min-height: 260px
+    @media screen and ( min-width: $md )
+        margin-top: 50px
+        width: 50%
 
 .imgLarge
-    height: 400px
     width: 100%
+    height: 200px
     background-position: center
     background-size: cover
     border-radius: 20px
     box-shadow: 0 0 6px #9e9e9e
+    @media screen and ( min-width: $md )
+        height: 400px
 
 .title
     text-align: center
     padding: 10px
+
+.price
+    font-size: 1.8rem
+
+.content
+    margin: 20px 0
+
+.oldPrice
+    color: tomato
+    font-style: italic
+    margin-right: 12px

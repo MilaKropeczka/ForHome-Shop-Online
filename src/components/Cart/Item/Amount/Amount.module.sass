@@ -1,0 +1,17 @@
+@import '../../../colors'
+.anim
+    transition: .2s
+
+button:hover > .anim
+    color: $primary
+    transform: scale(1.3)
+button:active > .anim
+    color: red
+    transform: scale(1.6)
+
+.backgroundColor
+    background-color: #faf7f5
+    border: none
+    width: 40px
+    @media only screen and (min-width: $sm) and (max-width: $md)
+        width: 30px
