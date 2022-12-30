@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Amount.module.sass';
 
 function Amount(props) {
-	const handleChange = props.handleChange;
+	const handleChange = props.handleChange();
 	return (
 		<div>
 			<form>
