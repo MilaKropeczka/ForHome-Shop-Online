@@ -34,7 +34,7 @@ function Item(props) {
 								handleChange={handleChange}
 								id={props.id}
 								removeAmount={props.removeAmount}
-								addAmount={props.removeAmount}
+								addAmount={props.addAmount}
 							/>
 						</Col>
 						<Col
