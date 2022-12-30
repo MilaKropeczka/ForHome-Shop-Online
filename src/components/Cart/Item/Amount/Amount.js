@@ -8,7 +8,7 @@ function Amount(props) {
 			<form>
 				Ilość: <br />
 				<button
-					className='m-lg-2 m-1 px-4 px-sm-3 px-lg-4 py-3 rounded-3 d-inline'
+					className='m-lg-2 m-1 px-4 px-sm-3 px-lg-4 py-3 rounded-3 d-inline button'
 					onClick={props.removeAmount}
 					name={props.id}>
 					<i
@@ -20,7 +20,7 @@ function Amount(props) {
 					value={props.amount}
 					onChange={handleChange}></input>
 				<button
-					className='m-lg-2 m-1 px-4 px-sm-3 px-lg-4 py-3 rounded-3 d-inline'
+					className='m-lg-2 m-1 px-4 px-sm-3 px-lg-4 py-3 rounded-3 d-inline button'
 					onClick={props.addAmount}
 					name={props.id}>
 					<i

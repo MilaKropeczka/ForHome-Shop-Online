@@ -257,8 +257,8 @@ function App() {
 			imgLarge: `${imgMug7}`,
 			category: `Kuchnia`,
 			fav: false,
-			amount: 1,
-			cart: true,
+			amount: 0,
+			cart: false,
 		},
 	]);
 
