@@ -30,7 +30,12 @@ function Item(props) {
 							xs={12}
 							sm
 							className={`d-flex justify-content-center align-items-center ${styles.fontSize} mb-5`}>
-							<Amount handleChange={handleChange} />
+							<Amount
+								handleChange={handleChange}
+								id={props.id}
+								removeAmount={props.removeAmount}
+								addAmount={props.removeAmount}
+							/>
 						</Col>
 						<Col
 							xs={12}
