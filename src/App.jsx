@@ -19,6 +19,10 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Logowanie from './components/Logowanie/Logowanie';
 import Rejestracja from './components/Rejestracja/Rejestracja';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import styles from './IdCheckHref.module.sass';
 
 // IMG
 import imgPillow1 from '../src/assets/Mobile/pillow1.jpg';
@@ -58,7 +62,7 @@ function App() {
 			price: 9.99,
 			newPrice: false, //priceSale
 			imgSmall: `${imgPillow1}`,
-			imgLarge: false,
+			imgLarge: `${imgPillow1}`,
 			category: 'Sypialnia',
 			fav: false,
 			amount: 0,
@@ -74,7 +78,7 @@ function App() {
 			price: 33.99,
 			newPrice: false,
 			imgSmall: `${imgPillow2}`,
-			imgLarge: false,
+			imgLarge: `${imgPillow2}`,
 			category: 'Sypialnia',
 			fav: false,
 			amount: 0,
@@ -90,7 +94,7 @@ function App() {
 			price: 104.99,
 			newPrice: false,
 			imgSmall: `${imgPillow3}`,
-			imgLarge: false,
+			imgLarge: `${imgPillow3}`,
 			category: 'Sypialnia',
 			fav: false,
 			amount: 0,
@@ -106,7 +110,7 @@ function App() {
 			price: 49.99,
 			newPrice: false,
 			imgSmall: `${imgPillow4}`,
-			imgLarge: false,
+			imgLarge: `${imgPillow4}`,
 			category: 'Sypialnia',
 			fav: false,
 			amount: 0,
@@ -122,7 +126,7 @@ function App() {
 			price: 129.99,
 			newPrice: 99.78,
 			imgSmall: `${imgPillow5}`,
-			imgLarge: false,
+			imgLarge: `${imgPillow5}`,
 			category: 'Sypialnia',
 			fav: false,
 			amount: 0,
@@ -138,7 +142,7 @@ function App() {
 			price: 29.99,
 			newPrice: false,
 			imgSmall: `${imgCandle2}`,
-			imgLarge: false,
+			imgLarge: `${imgCandle2}`,
 			category: 'Salon',
 			fav: false,
 			amount: 0,
@@ -154,7 +158,7 @@ function App() {
 			price: 19.99,
 			newPrice: 14.99,
 			imgSmall: `${imgCandle4}`,
-			imgLarge: false,
+			imgLarge: `${imgCandle4}`,
 			category: 'Salon',
 			fav: false,
 			amount: 0,
@@ -170,7 +174,7 @@ function App() {
 			price: 3.99,
 			newPrice: false,
 			imgSmall: `${imgCandle7}`,
-			imgLarge: false,
+			imgLarge: `${imgCandle7}`,
 			category: 'Salon',
 			fav: false,
 			amount: 0,
@@ -186,7 +190,7 @@ function App() {
 			price: 34.99,
 			newPrice: false,
 			imgSmall: `${imgCandle8}`,
-			imgLarge: false,
+			imgLarge: `${imgCandle8}`,
 			category: 'Salon',
 			fav: false,
 			amount: 0,
@@ -202,7 +206,7 @@ function App() {
 			price: 19.99,
 			newPrice: false,
 			imgSmall: `${imgMug2}`,
-			imgLarge: false,
+			imgLarge: `${imgMug2}`,
 			category: `Kuchnia`,
 			fav: false,
 			amount: 0,
@@ -218,7 +222,7 @@ function App() {
 			price: 24.99,
 			newPrice: 21.99,
 			imgSmall: `${imgMug3}`,
-			imgLarge: false,
+			imgLarge: `${imgMug3}`,
 			category: `Kuchnia`,
 			fav: false,
 			amount: 0,
@@ -234,7 +238,7 @@ function App() {
 			price: 14.99,
 			newPrice: false,
 			imgSmall: `${imgMug4}`,
-			imgLarge: false,
+			imgLarge: `${imgMug4}`,
 			category: `Kuchnia`,
 			fav: false,
 			amount: 0,
@@ -250,7 +254,7 @@ function App() {
 			price: 17.99,
 			newPrice: 14.99,
 			imgSmall: `${imgMug7}`,
-			imgLarge: false,
+			imgLarge: `${imgMug7}`,
 			category: `Kuchnia`,
 			fav: false,
 			amount: 0,
@@ -298,17 +302,35 @@ function App() {
 		let id = href.indexOf('=') + 1;
 		let link = href.slice(id);
 		let el = mapItems[link];
-		console.log(el);
+		// console.log(el);
 		return (
-			<h1>
-				<div> title {el.title}</div>
-				<div> content {el.content}</div>
-				<div> imgLarge {el.imgLarge}</div>
-				<div> price {el.price}</div>
-				<div> newPrice {el.newPrice}</div>
-				<div> status {el.status}</div>
-				<div> statusFont {el.statusFont}</div>
-			</h1>
+			<>
+				<Container>
+					<Row>
+						<Col xs={12} md={6} className={styles.leftBox}>
+							<Row>
+								<h1 className={styles.title}>{el.title}</h1>
+							</Row>
+							<Row>
+								<div
+									className={styles.imgLarge}
+									style={{
+										backgroundImage: `url('${el.imgLarge}')`,
+									}}></div>
+							</Row>
+						</Col>
+						<Col xs={12} md={6} className={styles.rightBox}>
+							<Row>
+								Cena {el.price} {el.newPrice} {el.statusFont}
+							</Row>
+							<Row>Opis {el.content}</Row>
+							<Row>Liczba sztuk</Row>
+							<Row>Dodaj do koszyka</Row>
+							<Row>Kup teraz</Row>
+						</Col>
+					</Row>
+				</Container>
+			</>
 		);
 	}
 
