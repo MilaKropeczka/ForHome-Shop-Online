@@ -257,8 +257,8 @@ function App() {
 			imgLarge: `${imgMug7}`,
 			category: `Kuchnia`,
 			fav: false,
-			amount: 0,
-			cart: false,
+			amount: 1,
+			cart: true,
 		},
 	]);
 
@@ -325,7 +325,9 @@ function App() {
 							</div>
 							<div className={styles.price}>
 								{el.newPrice === false ? (
-									<h3 className='text-center'>{el.price} zł</h3>
+									<h3 className='text-center'>
+										{el.price} zł
+									</h3>
 								) : (
 									<h3 className='text-center'>
 										<del className={styles.oldPrice}>
