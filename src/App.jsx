@@ -339,8 +339,15 @@ function App() {
 							</div>
 							<div className={styles.content}>{el.content}</div>
 							<div>Liczba sztuk</div>
-							<div>Dodaj do koszyka</div>
-							<div>Kup teraz</div>
+							<div className='d-flex justify-content-around flex-wrap'>
+								<button className={`${styles.buy}`}>
+									Dodaj do koszyka
+								</button>
+								<button
+									className={`${styles.buyNow} ${styles.buy}`}>
+									Kup teraz
+								</button>
+							</div>
 						</Col>
 					</Row>
 				</Container>
