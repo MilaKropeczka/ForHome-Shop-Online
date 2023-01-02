@@ -203,8 +203,8 @@ export const data = [
 		imgLarge: `${imgMug4}`,
 		category: `Kuchnia`,
 		fav: false,
-		amount: 0,
-		cart: false,
+		amount: 1,
+		cart: true,
 	},
 	{
 		id: 12,
@@ -219,7 +219,7 @@ export const data = [
 		imgLarge: `${imgMug7}`,
 		category: `Kuchnia`,
 		fav: false,
-		amount: 0,
-		cart: false,
+		amount: 1,
+		cart: true,
 	},
 ];

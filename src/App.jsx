@@ -21,6 +21,9 @@ import Logowanie from './components/Logowanie/Logowanie';
 import Rejestracja from './components/Rejestracja/Rejestracja';
 import { data } from './api/data';
 import SingleProduct from './components/organisms/SingleProduct';
+import { addAmount } from './hooks/addAmount';
+import { removeAmount } from './hooks/removeAmount';
+import { removeCart } from './hooks/removeCart';
 
 function ScrollToTop() {
 	const { pathname } = useLocation();
@@ -32,49 +35,48 @@ function ScrollToTop() {
 	return null;
 }
 
-let mapItems
-let setMapItems
+export let mapItems;
+export let setMapItems;
 
-
-function App() {
+export function App() {
 	const [isLogged, setLogged] = useState(false);
-	const [mapItems, setMapItems] = useState(data);
-	// [mapItems, setMapItems] = useState(data);
+	// const [mapItems, setMapItems] = useState(data);
+	[mapItems, setMapItems] = useState(data);
 
-	const addAmount = function (e) {
-		e.preventDefault();
-		let updateItems = [...mapItems];
-		let editItems = updateItems[e.target.getAttribute('name')];
-		let nameItems = updateItems[e.target.getAttribute('name')].id;
-		if (editItems.amount < 9) {
-			editItems.amount = editItems.amount + 1;
-		}
-		updateItems.splice(nameItems, 1, editItems);
-		setMapItems(updateItems);
-	};
+	// const addAmount = function (e) {
+	// 	e.preventDefault();
+	// 	let updateItems = [...mapItems];
+	// 	let editItems = updateItems[e.target.getAttribute('name')];
+	// 	let nameItems = updateItems[e.target.getAttribute('name')].id;
+	// 	if (editItems.amount < 9) {
+	// 		editItems.amount = editItems.amount + 1;
+	// 	}
+	// 	updateItems.splice(nameItems, 1, editItems);
+	// 	setMapItems(updateItems);
+	// };
 
-	const removeAmount = function (e) {
-		e.preventDefault();
-		let updateItems = [...mapItems];
-		let editItems = updateItems[e.target.getAttribute('name')];
-		let nameItems = updateItems[e.target.getAttribute('name')].id;
-		if (editItems.amount > 1) {
-			editItems.amount = editItems.amount - 1;
-		}
-		updateItems.splice(nameItems, 1, editItems);
-		setMapItems(updateItems);
-	};
+	// const removeAmount = function (e) {
+	// 	e.preventDefault();
+	// 	let updateItems = [...mapItems];
+	// 	let editItems = updateItems[e.target.getAttribute('name')];
+	// 	let nameItems = updateItems[e.target.getAttribute('name')].id;
+	// 	if (editItems.amount > 1) {
+	// 		editItems.amount = editItems.amount - 1;
+	// 	}
+	// 	updateItems.splice(nameItems, 1, editItems);
+	// 	setMapItems(updateItems);
+	// };
 
-	function removeCart(e) {
-		e.preventDefault();
-		let updateItems = [...mapItems];
-		let editItems = updateItems[e.target.getAttribute('name')];
-		let nameItems = updateItems[e.target.getAttribute('name')].id;
-		editItems.cart = false;
-		editItems.amount = 0;
-		updateItems.splice(nameItems, 1, editItems);
-		setMapItems(updateItems);
-	}
+	// function removeCart(e) {
+	// 	e.preventDefault();
+	// 	let updateItems = [...mapItems];
+	// 	let editItems = updateItems[e.target.getAttribute('name')];
+	// 	let nameItems = updateItems[e.target.getAttribute('name')].id;
+	// 	editItems.cart = false;
+	// 	editItems.amount = 0;
+	// 	updateItems.splice(nameItems, 1, editItems);
+	// 	setMapItems(updateItems);
+	// }
 
 	return (
 		<>
@@ -195,4 +197,4 @@ function App() {
 	);
 }
 
-export default App;
+// export default App;
