@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './Box.module.sass';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
+// import MapItems from '../../../hooks/MapItems';
 
 function Box(props) {
 	let checkNotification = false;
@@ -14,7 +15,6 @@ function Box(props) {
 		editItems.amount += 1;
 		updateItems.splice(props.id, 1, editItems);
 		props.setHandleState(updateItems);
-
 		setNotification(true);
 	}
 

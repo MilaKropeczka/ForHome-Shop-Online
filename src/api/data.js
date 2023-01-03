@@ -58,7 +58,7 @@ export const data = [
 		imgSmall: `${imgPillow3}`,
 		imgLarge: `${imgPillow3}`,
 		category: 'Sypialnia',
-		fav: false,
+		fav: true,
 		amount: 0,
 		cart: false,
 	},

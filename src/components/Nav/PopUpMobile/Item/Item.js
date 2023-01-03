@@ -6,7 +6,19 @@ function Item(props) {
 	return (
 		<>
 			<li>
-				<Link to={`${props.title}`} className={styles[props.className]}>
+				<Link
+					to={`${props.title
+						.toLowerCase()
+						.replaceAll(`ą`, `a`)
+						.replaceAll(`ć`, `c`)
+						.replaceAll(`ę`, `e`)
+						.replaceAll(`ł`, `l`)
+						.replaceAll(`ń`, `n`)
+						.replaceAll(`ó`, `o`)
+						.replaceAll(`ś`, `s`)
+						.replaceAll(`ź`, `z`)
+						.replaceAll(`ż`, `z`)}`}
+					className={styles[props.className]}>
 					{props.title}
 				</Link>
 			</li>
