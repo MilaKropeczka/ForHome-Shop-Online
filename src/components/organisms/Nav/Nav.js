@@ -2,7 +2,7 @@ import styles from './Nav.module.sass';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import PopUpMobile from './PopUpMobile/PopUpMobile';
+import PopUpMobile from '../../molecules/PopUpMobile/PopUpMobile';
 import DrawerContainer from '../../molecules/DrawerContainer/DrawerContainer';
 import Bars from '../../atoms/Bars/Bars';
 import Logo from '../../molecules/LogoDeskop/LogoDeskop';

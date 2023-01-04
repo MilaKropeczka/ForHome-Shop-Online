@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './PopUpMobile.module.sass';
-import Item from '../../../atoms/Item/Item';
-import Logo from '../../../molecules/LogoMobile/LogoMobile';
+import Logo from '../LogoMobile/LogoMobile';
+import Item from '../Item/Item';
 
 function PopUpMobile(props) {
 	return (
