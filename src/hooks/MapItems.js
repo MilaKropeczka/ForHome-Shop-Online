@@ -19,7 +19,7 @@ function MapItems(props) {
 		if (
 			(el[category] === title && category === 'category') ||
 			(category === 'status' && el[category] === status) ||
-			(el.fav === true && el[category] === status)
+			(el.fav === true && title === 'Ulubione')
 		) {
 			return (
 				<Box
