@@ -1,5 +1,5 @@
 import React from 'react';
-import Item from '../../atoms/ItemDeskop/Item';
+import Item from '../../atoms/ItemDeskop/ItemDeskop';
 
 function NavDeskop() {
 	return (

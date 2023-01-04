@@ -1,4 +1,4 @@
-import Item from '../ItemCart/Item';
+import Item from '../ItemCart/ItemCart';
 import Row from 'react-bootstrap/Row';
 
 let totalSum;

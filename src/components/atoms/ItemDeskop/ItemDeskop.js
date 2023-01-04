@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './Item.module.sass';
+import styles from './ItemDeskop.module.sass';
 import { Link } from 'react-router-dom';
 
-function Item(props) {
+function ItemDeskop(props) {
 	return (
-		<li>
+		<div className='d-inline-block mx-4'>
 			<Link
 				to={`${props.title
 					.toLowerCase()
@@ -20,8 +20,8 @@ function Item(props) {
 				className={styles[props.className]}>
 				{props.title.replaceAll(`/`, ``)}
 			</Link>
-		</li>
+		</div>
 	);
 }
 
-export default Item;
+export default ItemDeskop;

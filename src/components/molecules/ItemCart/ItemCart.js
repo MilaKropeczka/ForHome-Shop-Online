@@ -1,11 +1,10 @@
 import Col from 'react-bootstrap/Col';
 import Img from '../Img/Img';
-import styles from './Item.module.sass';
+import styles from './ItemCart.module.sass';
 import React, { useState } from 'react';
 import Amount from '../Amount/Amount';
 
-function Item(props) {
-	// const [handle, setHandle] = useState(props.amount);
+function ItemCart(props) {
 	const setHandle = useState(props.amount);
 
 	function handleChange(e) {
@@ -66,4 +65,4 @@ function Item(props) {
 	return checkIfZeroCart();
 }
 
-export default Item;
+export default ItemCart;
