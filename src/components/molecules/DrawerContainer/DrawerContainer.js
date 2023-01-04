@@ -1,5 +1,5 @@
 import React from 'react';
-import Ico from '../Ico/Ico';
+import Ico from '../../atoms/Ico/Ico';
 import Notification from '../../atoms/Notification/Notification';
 import IsNotLogged from '../IsNotLogged/IsNotLogged';
 import { useState } from 'react';

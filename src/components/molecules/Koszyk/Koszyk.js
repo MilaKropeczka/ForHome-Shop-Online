@@ -1,4 +1,4 @@
-import Item from '../ItemCart/ItemCart';
+import ItemCart from '../ItemCart/ItemCart';
 import Row from 'react-bootstrap/Row';
 
 let totalSum;
@@ -27,7 +27,7 @@ function Koszyk(props) {
 				<div key={el.id}>
 					<hr />
 					<Row className='text-center'>
-						<Item
+						<ItemCart
 							{...el}
 							sum={sum}
 							handleState={props.handleState}

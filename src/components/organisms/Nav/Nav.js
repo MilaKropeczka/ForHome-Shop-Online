@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import PopUpMobile from '../../molecules/PopUpMobile/PopUpMobile';
 import DrawerContainer from '../../molecules/DrawerContainer/DrawerContainer';
 import Bars from '../../atoms/Bars/Bars';
-import Logo from '../../molecules/LogoDeskop/LogoDeskop';
+import Logo from '../../atoms/LogoDeskop/LogoDeskop';
 import NavDeskop from '../../molecules/NavDeskop/NavDeskop';
 import { useState } from 'react';
 

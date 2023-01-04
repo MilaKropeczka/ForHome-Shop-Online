@@ -6,7 +6,8 @@ function Item(props) {
 	return (
 		<>
 			<Col xs={12} sm={4} className={`${styles.box} py-5 my-5`}>
-				<i className={`${props.ico} ${styles.fontSize} p-2 ${styles.rotate}`}></i>
+				<i
+					className={`${props.ico} ${styles.fontSize} p-2 ${styles.rotate}`}></i>
 				<p className={styles.title}>{props.title}</p>
 			</Col>
 		</>

@@ -1,5 +1,5 @@
 import Col from 'react-bootstrap/Col';
-import Img from '../Img/Img';
+import Img from '../../atoms/Img/Img';
 import styles from './ItemCart.module.sass';
 import React, { useState } from 'react';
 import Amount from '../Amount/Amount';
