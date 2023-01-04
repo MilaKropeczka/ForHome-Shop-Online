@@ -13,7 +13,7 @@ import { useLocation } from 'react-router-dom';
 import Logowanie from './components/molecules/Logowanie/Logowanie';
 import Rejestracja from './components/molecules/Rejestracja/Rejestracja';
 import { data } from './api/data';
-import SingleProduct from './components/molecules/SingleProduct/SingleProduct';
+import SingleProduct from './components/organisms/SingleProduct/SingleProduct';
 import { addAmount } from './hooks/addAmount';
 import { removeAmount } from './hooks/removeAmount';
 import { removeCart } from './hooks/removeCart';

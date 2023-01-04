@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Logo from '../Nav/Logo/Logo';
+import Logo from '../../molecules/LogoDeskop/LogoDeskop';
 import styles from './About.module.sass';
 
 function About() {

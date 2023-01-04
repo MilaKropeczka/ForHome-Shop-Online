@@ -1,5 +1,5 @@
 import React from 'react';
-import Accordions from './Accordions/Accordions';
+import Accordions from '../../molecules/Accordions/Accordions';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 

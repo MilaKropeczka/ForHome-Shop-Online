@@ -1,13 +1,12 @@
 import styles from './Nav.module.sass';
-// import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import PopUpMobile from './PopUpMobile/PopUpMobile';
-import DrawerContainer from './DrawerContainer/DrawerContainer';
-import Bars from './Bars/Bars';
-import Logo from './Logo/Logo';
-import NavDeskop from './NavDeskop/NavDeskop';
+import DrawerContainer from '../../molecules/DrawerContainer/DrawerContainer';
+import Bars from '../../atoms/Bars/Bars';
+import Logo from '../../molecules/LogoDeskop/LogoDeskop';
+import NavDeskop from '../../molecules/NavDeskop/NavDeskop';
 import { useState } from 'react';
 
 function Nav(props) {

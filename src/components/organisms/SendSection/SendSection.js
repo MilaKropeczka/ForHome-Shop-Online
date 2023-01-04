@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Item from './Item/Item';
+import Item from '../../molecules/Item/Item';
 import styles from './SendSection.module.sass';
 
 function SendSection() {

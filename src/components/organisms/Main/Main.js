@@ -12,7 +12,6 @@ function Main(props) {
 					<h2 className='text-center m-5'>{props.title}</h2>
 				</Col>
 			</Row>
-			{/* <Row>{props.component}</Row> */}
 			<Row>
 				<MapItems
 					title={props.title}

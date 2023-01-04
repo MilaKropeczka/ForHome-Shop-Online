@@ -1,5 +1,5 @@
 import { products, setProducts } from '../App.jsx';
-import Box from '../components/organisms/Main/Box/Box';
+import Box from '../components/molecules/NotificationWindow/NotificationWindow';
 
 function MapItems(props) {
 	const title = props.title
