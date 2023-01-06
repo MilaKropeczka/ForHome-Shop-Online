@@ -1,4 +1,4 @@
-import { products, setProducts } from '../App';
+import { products, setProducts } from '../components/templates/App';
 
 export function removeCart(e) {
 	e.preventDefault();

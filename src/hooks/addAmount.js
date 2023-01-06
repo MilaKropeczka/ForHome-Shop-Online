@@ -1,4 +1,4 @@
-import { products, setProducts } from '../App';
+import { products, setProducts } from '../components/templates/App';
 
 export const addAmount = function (e) {
 	e.preventDefault();

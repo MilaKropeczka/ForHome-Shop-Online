@@ -1,4 +1,5 @@
-import { products, setProducts } from '../App.jsx';
+// import { products, setProducts } from '../App.jsx';
+import { products, setProducts } from '../components/templates/App';
 import Box from '../components/molecules/NotificationWindow/NotificationWindow';
 
 function MapItems(props) {
