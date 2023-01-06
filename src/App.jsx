@@ -1,6 +1,4 @@
 import Nav from './components/organisms/Nav/Nav';
-import Header from './components/organisms/Header/Header';
-import Main from './components/organisms/Main/Main';
 import SendSection from './components/organisms/SendSection/SendSection';
 import Faq from './components/organisms/Faq/Faq';
 import About from './components/organisms/About/About';
@@ -17,6 +15,13 @@ import SingleProduct from './components/organisms/SingleProduct/SingleProduct';
 import { addAmount } from './hooks/addAmount';
 import { removeAmount } from './hooks/removeAmount';
 import { removeCart } from './hooks/removeCart';
+import Bedroom from './components/pages/Bedroom/Bedroom';
+import LivingRoom from './components/pages/LivingRoom/LivingRoom';
+import Kitchen from './components/pages/Kitchen/Kitchen';
+import Sale from './components/pages/Sale/Sale';
+import Favourite from './components/pages/Favourite/Favourite';
+import Search from './components/pages/Search/Serach';
+import Bestseller from './components/pages/Bestseller/Bestseller';
 
 function ScrollToTop() {
 	const { pathname } = useLocation();
@@ -44,32 +49,16 @@ export function App() {
 						<Nav handleState={products} isLogged={isLogged} />
 						<Switch>
 							<Route path='/sypialnia'>
-								<Main
-									title='Sypialnia'
-									category='category'
-									status='false'
-								/>
+								<Bedroom />
 							</Route>
 							<Route path='/salon'>
-								<Main
-									title='Salon'
-									category='category'
-									status='false'
-								/>
+								<LivingRoom />
 							</Route>
 							<Route path='/kuchnia'>
-								<Main
-									title='Kuchnia'
-									category='category'
-									status='false'
-								/>
+								<Kitchen />
 							</Route>
 							<Route path='/wyprzedaz'>
-								<Main
-									title='Wyprzedaż'
-									category='status'
-									status='wyprzedaz'
-								/>
+								<Sale />
 							</Route>
 							<Route path='/koszyk'>
 								<Cart
@@ -82,18 +71,10 @@ export function App() {
 								/>
 							</Route>
 							<Route path='/ulubione'>
-								<Main
-									title='Ulubione'
-									status='true'
-									category='fav'
-								/>
+								<Favourite />
 							</Route>
 							<Route path='/wyszukiwarka'>
-								<Main
-									title='Wyszukaj frazy ...""'
-									status='true'
-									category='fav'
-								/>
+								<Search />
 							</Route>
 							<Route path='/profil'></Route>
 							<Route path='/logowanie'>
@@ -105,14 +86,8 @@ export function App() {
 							<Route path='/oferty'>
 								<SingleProduct products={products} />
 							</Route>
-
 							<Route exact path='/'>
-								<Header />
-								<Main
-									title='Bestsellery'
-									status='hit'
-									category='status'
-								/>
+								<Bestseller />
 							</Route>
 						</Switch>
 						<SendSection />
