@@ -2,32 +2,15 @@ import React, { useState } from 'react';
 import styles from './NotificationWindow.module.sass';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
+import { addItem } from '../../../hooks/addItem';
+import { addFavorite } from '../../../hooks/addFavorite';
 
-function NotificationWindow(props) {
+export let notification;
+export let setNotification;
+
+export function NotificationWindow(props) {
 	let checkNotification = false;
-	const [notification, setNotification] = useState(checkNotification);
-
-	function addItem() {
-		let updateItems = [...props.handleState];
-		let editItems = updateItems[props.id];
-		editItems.cart = true;
-		editItems.amount += 1;
-		updateItems.splice(props.id, 1, editItems);
-		props.setHandleState(updateItems);
-		setNotification(true);
-	}
-
-	function addFavorite() {
-		let updateItems = [...props.handleState];
-		let editItems = updateItems[props.id];
-		if (editItems.fav === true) {
-			editItems.fav = false;
-		} else {
-			editItems.fav = true;
-		}
-		updateItems.splice(props.id, 1, editItems);
-		props.setHandleState(updateItems);
-	}
+	[notification, setNotification] = useState(checkNotification);
 
 	function OpenNotification() {
 		return (
@@ -91,7 +74,8 @@ function NotificationWindow(props) {
 							className={`fa-solid fa-heart ${styles.ico} ${
 								props.fav === true ? styles.icoTrue : styles.ico
 							}`}
-							onClick={addFavorite}></i>
+							onClick={addFavorite}
+							name={props.id}></i>
 						<Link to={viewProduct}>
 							<img
 								src={props.imgSmall}
@@ -114,7 +98,10 @@ function NotificationWindow(props) {
 							{props.newPrice ? props.newPrice + ` zł` : null}
 						</p>
 					</Link>
-					<div className={styles.buy} onClick={addItem}>
+					<div
+						className={styles.buy}
+						onClick={addItem}
+						name={props.id}>
 						Dodaj do koszyka
 					</div>
 				</div>
@@ -123,4 +110,4 @@ function NotificationWindow(props) {
 	);
 }
 
-export default NotificationWindow;
+// export default NotificationWindow;

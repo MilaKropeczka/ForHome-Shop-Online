@@ -1,6 +1,6 @@
 // import { products, setProducts } from '../App.jsx';
 import { products, setProducts } from '../components/templates/App';
-import Box from '../components/molecules/NotificationWindow/NotificationWindow';
+import { NotificationWindow } from '../components/molecules/NotificationWindow/NotificationWindow';
 
 function MapItems(props) {
 	const title = props.title
@@ -23,7 +23,7 @@ function MapItems(props) {
 			(el.fav === true && title === 'Ulubione')
 		) {
 			return (
-				<Box
+				<NotificationWindow
 					key={el.id}
 					{...el}
 					handleState={products}
