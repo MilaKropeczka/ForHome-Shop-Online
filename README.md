@@ -8,7 +8,9 @@
 ## I recommend to checking out my other project as well
 *** in progress **
 ## Installation
-*** in progress **
+    git clone https://github.com/MilaKropeczka/ForHome-Shop-Online.git
+    npm install
+    npm run start
 ## Solutions
 *** in progress **
 ## Further developments
