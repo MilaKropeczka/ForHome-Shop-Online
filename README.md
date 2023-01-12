@@ -19,8 +19,6 @@
     git clone https://github.com/MilaKropeczka/ForHome-Shop-Online.git
     npm install
     npm run start
-## Solutions
-*** in progress **
 ## Further developments
 - Product search
 - Ability to login and register
