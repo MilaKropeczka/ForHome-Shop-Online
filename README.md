@@ -2,7 +2,6 @@
 ![ a main page screenshot](./src/assets/ForHome.png)
 ## Description
 ### Main functions of the project
-ForHome enables you to:
 - Adding/removing an item to the favorites list
 - Adding/removing an item to the cart
 - Removing an item from the cart
