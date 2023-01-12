@@ -148,7 +148,7 @@ export const data = [
 		statusFont: 'normal',
 		title: `Duża świeczka różana`,
 		shortContent: `Zestaw świec z gwiazdą`,
-		content: `Ceramiczny kubek ze złotymi elementami. Poręczne ucho gwarantuje stabilny uchwyt podczas picia gorącego napoju. Proste kształty, stonowane kolory i matowa emalia nadają stołowi rustykalny charakter.`,
+		content: `Ceramiczny kubek ze złotymi elementami. Poręczne ucho gwarantuje stabilny uchwyt podczas picia gorącego napoju.`,
 		price: 34.99,
 		newPrice: false,
 		imgSmall: `${imgCandle8}`,
