@@ -1,8 +1,8 @@
 {
-	"name": "ForHome",
+	"name": "ForHome-Shop-Online",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://milakropeczka.github.io/ForHome/",
+	"homepage": "https://milakropeczka.github.io/ForHome-Shop-Online/",
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.16.4",
 		"@testing-library/react": "^13.3.0",
