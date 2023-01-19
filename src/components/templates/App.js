@@ -84,7 +84,9 @@ export function App() {
 								<Rejestracja />
 							</Route>
 							<Route path='/oferty'>
-								<SingleProduct products={products} />
+								<SingleProduct
+									products={products}
+								/>
 							</Route>
 							<Route exact path='/'>
 								<Bestseller />

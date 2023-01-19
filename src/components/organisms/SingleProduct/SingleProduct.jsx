@@ -9,6 +9,11 @@ function SingleProduct(props) {
 	let id = href.indexOf('=') + 1;
 	let link = href.slice(id);
 	let el = mapItems[link];
+
+	function addToCart() {
+		console.log(mapItems[link]);
+	}
+
 	return (
 		<>
 			<Container>
@@ -42,9 +47,27 @@ function SingleProduct(props) {
 							)}
 						</div>
 						<div className={styles.content}>{el.content}</div>
-						<div>Liczba sztuk</div>
+						<div className='m-4'>
+							<div className='d-inline-block m-3'>
+								<b>Ilość:</b>
+							</div>
+							<select
+								className={`d-inline-block ${styles.select}`}>
+								<option value='1'>1</option>
+								<option value='2'>2</option>
+								<option value='3'>3</option>
+								<option value='4'>4</option>
+								<option value='5'>5</option>
+								<option value='6'>6</option>
+								<option value='7'>7</option>
+								<option value='8'>8</option>
+								<option value='9'>9</option>
+							</select>
+						</div>
 						<div className='d-flex justify-content-around flex-wrap'>
-							<button className={`${styles.buy}`}>
+							<button
+								className={`${styles.buy}`}
+								onClick={addToCart}>
 								Dodaj do koszyka
 							</button>
 							<button
