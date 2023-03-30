@@ -11,6 +11,7 @@ import { useLocation } from 'react-router-dom';
 import Logowanie from '../molecules/Logowanie/Logowanie';
 import Rejestracja from '../molecules/Rejestracja/Rejestracja';
 import { data } from '../../api/data';
+// import { SingleProduct } from '../organisms/SingleProduct/SingleProduct';
 import SingleProduct from '../organisms/SingleProduct/SingleProduct';
 import { addAmount } from '../../hooks/addAmount';
 import { removeAmount } from '../../hooks/removeAmount';
@@ -84,9 +85,7 @@ export function App() {
 								<Rejestracja />
 							</Route>
 							<Route path='/oferty'>
-								<SingleProduct
-									products={products}
-								/>
+								<SingleProduct products={products} />
 							</Route>
 							<Route exact path='/'>
 								<Bestseller />
