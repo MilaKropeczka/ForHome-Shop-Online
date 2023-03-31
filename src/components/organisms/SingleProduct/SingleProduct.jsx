@@ -52,6 +52,7 @@ function SingleProduct(props) {
 		}
 		updateItems.splice(nameItems, 1, editItems);
 		setProducts(updateItems);
+		xyz = undefined;
 	}
 
 	function buyNow() {
