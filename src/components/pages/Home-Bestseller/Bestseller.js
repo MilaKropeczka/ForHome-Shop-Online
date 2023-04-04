@@ -6,7 +6,7 @@ function Bestseller() {
 	return (
 		<>
 			<Header />
-			<Main title='Bestsellery' status='hit' category='status' />
+			<Main title='Bestsellery' status='hit' />
 		</>
 	);
 }

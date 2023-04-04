@@ -1,23 +1,6 @@
 import React, { useState } from 'react';
 import Main from '../../organisms/Main/Main';
-import { NotificationWindow as ProductsWindow } from '../../molecules/NotificationWindow/NotificationWindow';
-import { products, setProducts } from '../../templates/App';
-
-function checkSearchProducts() {
-	const mapItemsFunction = products.map((el) => {
-		if (el.title.includes(`Brązo`)) {
-			return (
-				<ProductsWindow
-					key={el.id}
-					{...el}
-					handleState={products}
-					setHandleState={setProducts}
-				/>
-			);
-		}
-	});
-	return mapItemsFunction;
-}
+import MapItems from '../../../hooks/MapItems';
 
 function Search() {
 	const [isSearched, setSearched] = useState(false);
@@ -35,7 +18,7 @@ function Search() {
 				type='text'
 				placeholder='wprowadz nazwe produktu'
 			/>
-			{isSearched === true ? checkSearchProducts() : null}
+			{isSearched === true ? <MapItems /> : null}
 			<br />
 			<br />
 			<br />

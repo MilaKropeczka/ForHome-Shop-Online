@@ -3,7 +3,7 @@ import { products, setProducts } from '../components/templates/App';
 import { NotificationWindow } from '../components/molecules/NotificationWindow/NotificationWindow';
 
 function MapItems(props) {
-	const title = props.title
+	props.title
 		.replaceAll(`ą`, `a`)
 		.replaceAll(`ć`, `c`)
 		.replaceAll(`ę`, `e`)
@@ -13,14 +13,15 @@ function MapItems(props) {
 		.replaceAll(`ś`, `s`)
 		.replaceAll(`ź`, `z`)
 		.replaceAll(`ż`, `z`);
-	const category = props.category;
-	const status = props.status;
 
 	const mapItemsFunction = products.map((el) => {
+		console.log(el.title);
+		console.log(props.status);
 		if (
-			(el[category] === title && category === 'category') ||
-			(category === 'status' && el[category] === status) ||
-			(el.fav === true && title === 'Ulubione')
+			el.category === props.category ||
+			el.status === props.status ||
+			el.title.includes(`kub`)
+
 		) {
 			return (
 				<NotificationWindow
