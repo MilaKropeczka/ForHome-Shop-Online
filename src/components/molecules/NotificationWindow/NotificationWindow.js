@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { addItem } from '../../../hooks/addItem';
 import { addFavorite } from '../../../hooks/addFavorite';
 
+
 export let notification;
 export let setNotification;
 
@@ -12,7 +13,7 @@ export function NotificationWindow(props) {
 	let checkNotification = false;
 	[notification, setNotification] = useState(checkNotification);
 
-	function OpenNotification() {
+	function OpenNotificationWindow() {
 		return (
 			<>
 				<div className={styles.shadow}></div>
@@ -66,7 +67,7 @@ export function NotificationWindow(props) {
 
 	return (
 		<>
-			{notification === true ? OpenNotification() : null}
+			{notification === true ? OpenNotificationWindow() : null}
 			<Col>
 				<div className={`${styles.box}`}>
 					<div className={styles.img}>

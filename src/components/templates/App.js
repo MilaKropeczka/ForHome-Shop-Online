@@ -41,6 +41,10 @@ export function App() {
 	const [isLogged, setLogged] = useState(false);
 	[products, setProducts] = useState(data);
 
+	// function testowo(e) {
+	// 	console.log(e.target.value);
+	// }
+
 	return (
 		<>
 			<Router>
@@ -75,7 +79,8 @@ export function App() {
 								<Favourite />
 							</Route>
 							<Route path='/wyszukiwarka'>
-								<Search />
+								<Search products={products} />
+								{/* <Search testowo={testowo} products={products} /> */}
 							</Route>
 							<Route path='/profil'></Route>
 							<Route path='/logowanie'>
@@ -85,7 +90,10 @@ export function App() {
 								<Rejestracja />
 							</Route>
 							<Route path='/oferty'>
-								<SingleProduct products={products} />
+								<SingleProduct
+									handleState={products}
+									setHandleState={setProducts}
+								/>
 							</Route>
 							<Route exact path='/'>
 								<Bestseller />
