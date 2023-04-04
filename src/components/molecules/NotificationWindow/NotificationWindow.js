@@ -91,9 +91,10 @@ export function NotificationWindow(props) {
 							{props.status}
 						</p>
 						<h4>
-							{props.title.replace(/^[a-zżźćńółęąś]/i, (match) =>
+							{props.title}
+							{/* {props.title.replace(/^[a-zżźćńółęąś]/i, (match) =>
 								match.toUpperCase()
-							)}
+							)} */}
 						</h4>
 						<p className={styles[props.statusFont]}>
 							{props.price} zł
