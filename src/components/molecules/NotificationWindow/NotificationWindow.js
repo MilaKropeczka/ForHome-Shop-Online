@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import { addItem } from '../../../hooks/addItem';
 import { addFavorite } from '../../../hooks/addFavorite';
 
-
 export let notification;
 export let setNotification;
 
@@ -91,7 +90,11 @@ export function NotificationWindow(props) {
 							}>
 							{props.status}
 						</p>
-						<h4>{props.title}</h4>
+						<h4>
+							{props.title.replace(/^[a-zżźćńółęąś]/i, (match) =>
+								match.toUpperCase()
+							)}
+						</h4>
 						<p className={styles[props.statusFont]}>
 							{props.price} zł
 						</p>

@@ -1,24 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Main from '../../organisms/Main/Main';
-import MapItems from '../../../hooks/MapItems';
 
 function Search() {
-	const [isSearched, setSearched] = useState(false);
-
-	const changeIsSearched = () => {
-		setSearched(true);
-	};
-
 	return (
 		<>
-			<Main title='Wyszukaj frazy...' />
-			<input
-				onChange={changeIsSearched}
-				className='text-center m-auto'
-				type='text'
-				placeholder='wprowadz nazwe produktu'
-			/>
-			{isSearched === true ? <MapItems /> : null}
+			<Main title='Wyszukaj frazy...' category='search' />
 			<br />
 			<br />
 			<br />
